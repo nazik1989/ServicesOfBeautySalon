@@ -1,0 +1,20 @@
+﻿.currentServiceDiv 
+    {
+        margin:5px;
+        padding:10px;
+        border: solid orange;
+        border-radius : 10px;
+    }
+
+.ButtonRigisterService 
+    {
+        background-color: green;
+        border-radius:10px;
+        color: white;   
+    }
+
+
+.ButtonRigisterService:after 
+    {
+      content: "Register to service";
+    }

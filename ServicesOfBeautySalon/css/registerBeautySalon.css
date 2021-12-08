@@ -1,0 +1,24 @@
+﻿.registerBeautySalonField {
+    padding: 5px;
+    margin: 5px;
+    border: solid orange;
+    border-radius: 10px;
+}
+
+.registerBeautySalonFormButtons {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    border: solid orange;
+    width: 150px;
+}
+
+.registerBeautySalonFieldLabel {
+}
+
+/*#outputBeautySalonImage 
+{
+    height : 200px;
+}*/
+

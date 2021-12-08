@@ -1,0 +1,22 @@
+﻿.registerUserFormField 
+{
+    padding : 5px; 
+    margin:5px;
+    border : solid orange;
+    border-radius: 10px;
+}
+.registerUserFormButtons 
+{
+    padding:10px;
+    background-color:orange;
+    color:white;
+    border-radius : 10px;
+    border : solid orange;
+    width : 150px;
+
+}
+/*.contentOfField {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}*/

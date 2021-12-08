@@ -1,0 +1,23 @@
+﻿.labelForRegisterServiceFilds {
+    color: orange !important;
+}
+
+.btnResetRegister {
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    background: orange;
+    border-radius: 5px;
+}
+
+.magin10 {
+    margin: 10px;
+}
+
+.registerToServiceField {
+    padding: 5px;
+    margin: 5px;
+    border: solid orange;
+    border-radius: 5px;
+}
