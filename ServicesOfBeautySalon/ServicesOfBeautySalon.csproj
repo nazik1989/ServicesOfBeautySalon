@@ -147,33 +147,35 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Scripts\afterJaralax.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="css\about.css" />
-    <Content Include="css\beautySalonAccount.css" />
-    <Content Include="css\beautySalons.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\flexslider.css" />
-    <Content Include="css\font-awesome.css" />
-    <Content Include="css\home.css" />
-    <Content Include="css\lightbox.css" />
-    <Content Include="css\masters.css" />
-    <Content Include="css\owl.carousel.css" />
-    <Content Include="css\registerBeautySalon.css" />
-    <Content Include="css\registerToService.css" />
-    <Content Include="css\registerUser.css" />
-    <Content Include="css\services.css" />
-    <Content Include="css\style.css" />
-    <Content Include="css\userAccount.css" />
+    <Content Include="Content\about.css" />
+    <Content Include="Content\beautySalonAccount.css" />
+    <Content Include="Content\beautySalons.css" />
+    <Content Include="Content\flexslider.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\lightbox.css" />
+    <Content Include="Content\masters.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\registerBeautySalon.css" />
+    <Content Include="Content\registerToService.css" />
+    <Content Include="Content\registerUser.css" />
+    <Content Include="Content\services.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\userAccount.css" />
     <Content Include="images\1.jpg" />
     <Content Include="images\11.jpg" />
     <Content Include="images\2.jpg" />
@@ -226,27 +228,25 @@
     <Content Include="images\t3.jpg" />
     <Content Include="images\t4.jpg" />
     <Content Include="images\valentinaBeauty.jpg" />
-    <Content Include="js\about.js" />
-    <Content Include="js\beautySalonAccount.js" />
-    <Content Include="js\beautySalons.js" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\easing.js" />
-    <Content Include="js\forAllPages.js" />
-    <Content Include="js\home.js" />
-    <Content Include="js\jarallax.js" />
-    <Content Include="js\jquery-2.2.3.min.js" />
-    <Content Include="js\jquery.countup.js" />
-    <Content Include="js\jquery.flexslider.js" />
-    <Content Include="js\jquery.waypoints.min.js" />
-    <Content Include="js\lightbox-plus-jquery.min.js" />
-    <Content Include="js\masters.js" />
-    <Content Include="js\move-top.js" />
-    <Content Include="js\owl.carousel.js" />
-    <Content Include="js\registerBeautySalon.js" />
-    <Content Include="js\registerToService.js" />
-    <Content Include="js\registerUser.js" />
-    <Content Include="js\services.js" />
-    <Content Include="js\userAccount.js" />
+    <Content Include="Scripts\about.js" />
+    <Content Include="Scripts\beautySalonAccount.js" />
+    <Content Include="Scripts\beautySalons.js" />
+    <Content Include="Scripts\easing.js" />
+    <Content Include="Scripts\forAllPages.js" />
+    <Content Include="Scripts\home.js" />
+    <Content Include="Scripts\jarallax.js" />
+    <Content Include="Scripts\jquery.countup.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
+    <Content Include="Scripts\jquery.waypoints.min.js" />
+    <Content Include="Scripts\lightbox-plus-jquery.min.js" />
+    <Content Include="Scripts\masters.js" />
+    <Content Include="Scripts\move-top.js" />
+    <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\registerBeautySalon.js" />
+    <Content Include="Scripts\registerToService.js" />
+    <Content Include="Scripts\registerUser.js" />
+    <Content Include="Scripts\services.js" />
+    <Content Include="Scripts\userAccount.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -262,6 +262,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="images\Thumbs.db" />
+    <Content Include="Scripts\lightbox-plus-jquery.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -273,8 +274,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -294,7 +293,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4769</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/ServicesOfBeautySalon</IISUrl>
+          <IISUrl>http://localhost/beauty</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
