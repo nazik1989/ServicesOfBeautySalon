@@ -20,9 +20,9 @@ namespace ServicesOfBeautySalon.DAL
             this.BeautySalonServices = new HashSet<BeautySalonService>();
         }
     
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string Name { get; set; }
-        public int ServiceTypeID { get; set; }
+        public long ServiceTypeID { get; set; }
         public Nullable<int> Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

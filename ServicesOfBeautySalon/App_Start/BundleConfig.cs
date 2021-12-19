@@ -36,8 +36,8 @@ namespace ServicesOfBeautySalon
             bundles.Add(new ScriptBundle("~/bundles/afterJaralax").Include(
                 "~/Scripts/afterJaralax.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/owlcarousel").Include(
-                        "~/Scripts/owl.carousel.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/owlcarousel").Include(
+            //            "~/Scripts/owl.carousel.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/movetop").Include(
                         "~/Scripts/move-top.js"));

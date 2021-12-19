@@ -20,7 +20,7 @@ namespace ServicesOfBeautySalon.DAL
             this.Services = new HashSet<Service>();
         }
     
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string Name { get; set; }
         public string ImageURL { get; set; }
         public Nullable<int> CountOfServices { get; set; }

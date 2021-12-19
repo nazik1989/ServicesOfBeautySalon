@@ -22,13 +22,13 @@ namespace ServicesOfBeautySalon.DAL
             this.Registrations = new HashSet<Registration>();
         }
     
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
         public string Mail { get; set; }
         public string ImageURL { get; set; }
-        public int RoleID { get; set; }
+        public long RoleID { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
     

@@ -20,7 +20,7 @@ namespace ServicesOfBeautySalon.DAL
             this.Users = new HashSet<User>();
         }
     
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string Name { get; set; }
         public string Permission { get; set; }
     

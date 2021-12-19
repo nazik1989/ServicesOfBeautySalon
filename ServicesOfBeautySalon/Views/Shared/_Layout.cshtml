@@ -14,7 +14,7 @@
 
     <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
 
-    it doesn't work correctly
+    @*it doesn't work correctly*@
     @*@Styles.Render("~/Content/css")*@
 
     @Scripts.Render("~/bundles/jquery")
@@ -25,13 +25,16 @@
     @Scripts.Render("~/bundles/home")
     @Scripts.Render("~/bundles/jarallax")
     
-    @Scripts.Render("~/bundles/owlcarousel")
-    @Scripts.Render("~/bundles/movetop")
+    @*@Scripts.Render("~/bundles/owlcarousel")*@
+
+    @*@Scripts.Render("~/bundles/movetop")*@
+
     @Scripts.Render("~/bundles/countup")
     @Scripts.Render("~/bundles/flexslider")
     @Scripts.Render("~/bundles/waypoints")
-    @Scripts.Render("~/bundles/lightbox")
-    @Scripts.Render("~/bundles/lightboxmap")
+
+    @*@Scripts.Render("~/bundles/lightbox")*@
+    @*@Scripts.Render("~/bundles/lightboxmap")*@
 
     @RenderSection("scripts", required: false)
 </head>
@@ -245,8 +248,10 @@
                 imgHeight: 768
             })
         </script>*@
-            <!-- flexSlider -->
-            @*<script defer src="js/jquery.flexslider.js"></script>*@
+
+
+            <!--<!-- flexSlider -->-->
+            <!--@*<script defer src="js/jquery.flexslider.js"></script>*@
             <script type="text/javascript">
                 $(window).load(function () {
                     $('.flexslider').flexslider({
@@ -256,10 +261,12 @@
                         }
                     });
                 });
-            </script>
+            </script>-->
             <!-- //flexSlider -->
-            <!-- Owl-Carousel-JavaScript -->
-            @*<script src="js/owl.carousel.js"></script>*@
+
+
+            <!--<!-- Owl-Carousel-JavaScript -->-->
+            <!--@*<script src="js/owl.carousel.js"></script>*@
             <script>
                 $(document).ready(function () {
                     $("#owl-demo").owlCarousel({
@@ -269,8 +276,9 @@
                         pagination: true,
                     });
                 });
-            </script>
+            </script>-->
             <!-- //Owl-Carousel-JavaScript -->
+
             @*<script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/easing.js"></script>*@
             <script type="text/javascript">
@@ -302,16 +310,16 @@
 
                 });
             </script>
-            <!-- //here ends scrolling icon -->
-            <!-- stats -->
-            @*<script src="js/jquery.waypoints.min.js"></script>
+            <!--<!-- //here ends scrolling icon -->
+            <!-- stats -->-->
+            <!--@*<script src="js/jquery.waypoints.min.js"></script>
         <script src="js/jquery.countup.js"></script>*@
-            <script>
+            <!--<script>
                 $('.counter').countUp();
-            </script>
+            </script>-->
             <!-- //stats -->
-            <!--js for bootstrap working-->
-            @*<script src="js/bootstrap.js"></script>*@
+            <!--js for bootstrap working-->-->
+            <!--@*<script src="js/bootstrap.js"></script>*@-->
             <!-- //for bootstrap working -->
 
 

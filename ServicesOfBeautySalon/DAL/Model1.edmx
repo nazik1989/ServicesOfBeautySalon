@@ -9,16 +9,16 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="BeautySalonID" Type="int" Nullable="false" />
+          <Property Name="BeautySalonID" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="BeautySalon">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -28,25 +28,25 @@
           <Property Name="ImageURL" Type="nvarchar(max)" />
           <Property Name="CountOfSerivces" Type="int" />
           <Property Name="CountOfMasters" Type="int" />
-          <Property Name="AdminUserID" Type="int" Nullable="false" />
+          <Property Name="AdminUserID" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="BeautySalonService">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="BeautySalonID" Type="int" Nullable="false" />
-          <Property Name="ServiceID" Type="int" Nullable="false" />
-          <Property Name="MasterUserID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="BeautySalonID" Type="bigint" Nullable="false" />
+          <Property Name="ServiceID" Type="bigint" Nullable="false" />
+          <Property Name="MasterUserID" Type="bigint" Nullable="false" />
           <Property Name="Discount" Type="int" />
         </EntityType>
         <EntityType Name="Registration">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="RegisterUserID" Type="int" Nullable="false" />
-          <Property Name="BeautySalonServiceID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="RegisterUserID" Type="bigint" Nullable="false" />
+          <Property Name="BeautySalonServiceID" Type="bigint" Nullable="false" />
           <Property Name="Day" Type="date" Nullable="false" />
           <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
           <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
@@ -55,7 +55,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Permission" Type="nvarchar" MaxLength="500" Nullable="false" />
         </EntityType>
@@ -63,16 +63,16 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="ServiceTypeID" Type="int" Nullable="false" />
+          <Property Name="ServiceTypeID" Type="bigint" Nullable="false" />
           <Property Name="Price" Type="int" />
         </EntityType>
         <EntityType Name="ServiceType">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ImageURL" Type="nvarchar(max)" />
           <Property Name="CountOfServices" Type="int" />
@@ -91,13 +91,13 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="bigint" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Phone" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Mail" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="ImageURL" Type="nvarchar(max)" />
-          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="bigint" Nullable="false" />
           <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
@@ -265,17 +265,17 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BeautySalonID" Type="Int32" Nullable="false" />
+          <Property Name="BeautySalonID" Type="Int64" Nullable="false" />
           <NavigationProperty Name="BeautySalon" Relationship="Self.FK_Advertisement_BeautySalon" FromRole="Advertisement" ToRole="BeautySalon" />
         </EntityType>
         <EntityType Name="BeautySalon">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -285,7 +285,7 @@
           <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CountOfSerivces" Type="Int32" />
           <Property Name="CountOfMasters" Type="Int32" />
-          <Property Name="AdminUserID" Type="Int32" Nullable="false" />
+          <Property Name="AdminUserID" Type="Int64" Nullable="false" />
           <NavigationProperty Name="Advertisements" Relationship="Self.FK_Advertisement_BeautySalon" FromRole="BeautySalon" ToRole="Advertisement" />
           <NavigationProperty Name="User" Relationship="Self.FK_BeautySalon_User" FromRole="BeautySalon" ToRole="User" />
           <NavigationProperty Name="BeautySalonServices" Relationship="Self.FK_BeautySalonService_BeautySalon" FromRole="BeautySalon" ToRole="BeautySalonService" />
@@ -294,10 +294,10 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="BeautySalonID" Type="Int32" Nullable="false" />
-          <Property Name="ServiceID" Type="Int32" Nullable="false" />
-          <Property Name="MasterUserID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="BeautySalonID" Type="Int64" Nullable="false" />
+          <Property Name="ServiceID" Type="Int64" Nullable="false" />
+          <Property Name="MasterUserID" Type="Int64" Nullable="false" />
           <Property Name="Discount" Type="Int32" />
           <NavigationProperty Name="BeautySalon" Relationship="Self.FK_BeautySalonService_BeautySalon" FromRole="BeautySalonService" ToRole="BeautySalon" />
           <NavigationProperty Name="Service" Relationship="Self.FK_BeautySalonService_Service" FromRole="BeautySalonService" ToRole="Service" />
@@ -308,9 +308,9 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="RegisterUserID" Type="Int32" Nullable="false" />
-          <Property Name="BeautySalonServiceID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="RegisterUserID" Type="Int64" Nullable="false" />
+          <Property Name="BeautySalonServiceID" Type="Int64" Nullable="false" />
           <Property Name="Day" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
           <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
@@ -321,7 +321,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Permission" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
@@ -330,9 +330,9 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ServiceTypeID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceTypeID" Type="Int64" Nullable="false" />
           <Property Name="Price" Type="Int32" />
           <NavigationProperty Name="BeautySalonServices" Relationship="Self.FK_BeautySalonService_Service" FromRole="Service" ToRole="BeautySalonService" />
           <NavigationProperty Name="ServiceType" Relationship="Self.FK_Service_ServiceType" FromRole="Service" ToRole="ServiceType" />
@@ -341,7 +341,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="CountOfServices" Type="Int32" />
@@ -361,13 +361,13 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" />
           <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ImageURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int64" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="BeautySalons" Relationship="Self.FK_BeautySalon_User" FromRole="User" ToRole="BeautySalon" />
@@ -483,7 +483,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BeautySalonServiceDBConectionString" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BeautySalonServiceDBConection" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Advertisements" EntityType="Self.Advertisement" />
           <EntitySet Name="BeautySalons" EntityType="Self.BeautySalon" />
           <EntitySet Name="BeautySalonServices" EntityType="Self.BeautySalonService" />
@@ -535,7 +535,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BeautySalonServiceDBModelStoreContainer" CdmEntityContainer="BeautySalonServiceDBConectionString">
+        <EntityContainerMapping StorageEntityContainer="BeautySalonServiceDBModelStoreContainer" CdmEntityContainer="BeautySalonServiceDBConection">
           <EntitySetMapping Name="Advertisements">
             <EntityTypeMapping TypeName="BeautySalonServiceDBModel.Advertisement">
               <MappingFragment StoreEntitySet="Advertisement">

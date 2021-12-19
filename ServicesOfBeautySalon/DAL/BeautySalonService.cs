@@ -20,10 +20,10 @@ namespace ServicesOfBeautySalon.DAL
             this.Registrations = new HashSet<Registration>();
         }
     
-        public int ID { get; set; }
-        public int BeautySalonID { get; set; }
-        public int ServiceID { get; set; }
-        public int MasterUserID { get; set; }
+        public long ID { get; set; }
+        public long BeautySalonID { get; set; }
+        public long ServiceID { get; set; }
+        public long MasterUserID { get; set; }
         public Nullable<int> Discount { get; set; }
     
         public virtual BeautySalon BeautySalon { get; set; }

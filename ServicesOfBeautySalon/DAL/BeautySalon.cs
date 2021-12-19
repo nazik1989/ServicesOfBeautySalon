@@ -21,7 +21,7 @@ namespace ServicesOfBeautySalon.DAL
             this.BeautySalonServices = new HashSet<BeautySalonService>();
         }
     
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
@@ -31,7 +31,7 @@ namespace ServicesOfBeautySalon.DAL
         public string ImageURL { get; set; }
         public Nullable<int> CountOfSerivces { get; set; }
         public Nullable<int> CountOfMasters { get; set; }
-        public int AdminUserID { get; set; }
+        public long AdminUserID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Advertisement> Advertisements { get; set; }

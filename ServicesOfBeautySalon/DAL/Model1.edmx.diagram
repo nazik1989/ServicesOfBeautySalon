@@ -4,15 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3b30bf3dc6e2424d8a20db38c29e455f" Name="Diagram1">
+      <Diagram DiagramId="4c8563b8feac4e2da81914c6c03a796f" Name="Diagram1">
         <EntityTypeShape EntityType="BeautySalonServiceDBModel.Advertisement" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BeautySalonServiceDBModel.BeautySalon" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="BeautySalonServiceDBModel.BeautySalonService" Width="1.5" PointX="10.5" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BeautySalonServiceDBModel.Registration" Width="1.5" PointX="12.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BeautySalonServiceDBModel.Role" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalonServiceDBModel.Service" Width="1.5" PointX="7.625" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalonServiceDBModel.ServiceType" Width="1.5" PointX="5.125" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BeautySalonServiceDBModel.sysdiagram" Width="1.5" PointX="0.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautySalonServiceDBModel.Service" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautySalonServiceDBModel.ServiceType" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeautySalonServiceDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BeautySalonServiceDBModel.User" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="BeautySalonServiceDBModel.FK_Advertisement_BeautySalon" ManuallyRouted="false" />
         <AssociationConnector Association="BeautySalonServiceDBModel.FK_BeautySalon_User" ManuallyRouted="false" />

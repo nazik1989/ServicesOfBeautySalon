@@ -14,9 +14,9 @@ namespace ServicesOfBeautySalon.DAL
     
     public partial class Registration
     {
-        public int ID { get; set; }
-        public int RegisterUserID { get; set; }
-        public int BeautySalonServiceID { get; set; }
+        public long ID { get; set; }
+        public long RegisterUserID { get; set; }
+        public long BeautySalonServiceID { get; set; }
         public System.DateTime Day { get; set; }
         public System.TimeSpan StartTime { get; set; }
         public System.TimeSpan EndTime { get; set; }

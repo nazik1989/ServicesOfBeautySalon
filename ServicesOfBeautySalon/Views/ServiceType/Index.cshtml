@@ -1,0 +1,34 @@
+﻿@using ServicesOfBeautySalon.Models
+@model IEnumerable<ServiceTypeModel>
+
+
+@{
+    ViewBag.Title = "ServiceType";
+}
+
+<h2>My all ServiceTypes</h2>
+
+@foreach (var serviceType in Model)
+{
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            ID:  @serviceType.ID<br />
+        </div>
+        <div class="col-md-6">
+            Name:  @serviceType.Name<br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            IMG:  @serviceType.ImageURL<br />
+        </div>
+        <div class="col-md-6">
+            Count:  @serviceType.CountOfServices<br />
+        </div>
+    </div>
+    <hr />
+</div>
+}
+
+<a href="~/ServiceType/Create">Create new Service type</a>

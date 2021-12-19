@@ -235,3 +235,7 @@ C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\obj\Debug\Servi
 C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\obj\Debug\ServicesOfBeautySalon.csproj.CopyComplete
 C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\obj\Debug\ServicesOfBeautySalon.dll
 C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\obj\Debug\ServicesOfBeautySalon.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\bin\EntityFramework.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\bin\EntityFramework.SqlServer.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\bin\EntityFramework.xml
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon\bin\EntityFramework.SqlServer.xml

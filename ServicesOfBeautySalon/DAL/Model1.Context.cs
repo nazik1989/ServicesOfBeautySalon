@@ -13,10 +13,10 @@ namespace ServicesOfBeautySalon.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BeautySalonServiceDBConectionString : DbContext
+    public partial class BeautySalonServiceDBConection : DbContext
     {
-        public BeautySalonServiceDBConectionString()
-            : base("name=BeautySalonServiceDBConectionString")
+        public BeautySalonServiceDBConection()
+            : base("name=BeautySalonServiceDBConection")
         {
         }
     
