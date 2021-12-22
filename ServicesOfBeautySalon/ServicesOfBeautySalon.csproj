@@ -129,7 +129,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\MasterController.cs" />
+    <Compile Include="Controllers\BeautySalonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\ServiceTypeController.cs" />
     <Compile Include="DAL\Advertisement.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -176,7 +180,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BeautySalon.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\ServiceModel.cs" />
     <Compile Include="Models\ServiceTypeModel.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -333,6 +341,14 @@
     <Content Include="images\Thumbs.db" />
     <Content Include="Views\ServiceType\Index.cshtml" />
     <Content Include="Views\ServiceType\Create.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\Service\Create.cshtml" />
+    <Content Include="Views\BeautySalon\Create.cshtml" />
+    <Content Include="Views\BeautySalon\Index.cshtml" />
+    <Content Include="Views\Master\Create.cshtml" />
+    <Content Include="Views\Master\Index.cshtml" />
+    <Content Include="Views\About\Create.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
