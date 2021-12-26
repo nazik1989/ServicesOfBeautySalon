@@ -1,0 +1,17 @@
+﻿@using ServicesOfBeautySalon.Models
+
+@model ServiceTypeModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm("Delete", "ServiceType", FormMethod.Post))
+    { 
+    @Html.HiddenFor(m => m.ID)
+        <p>Are you sure you want to delete the @Model.Name service type ? </p>
+        <input type="submit" value="Delete"/>
+        @Html.ActionLink("Cancel", "Index", "ServiceType")
+    }

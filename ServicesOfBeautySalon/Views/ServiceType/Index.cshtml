@@ -66,33 +66,33 @@
 
 
 
-
-
-
-
 <h2>My all ServiceTypes</h2>
 
-@foreach (var serviceType in Model)
-{
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                ID:  @serviceType.ID<br />
-            </div>
-            <div class="col-md-6">
-                Name:  @serviceType.Name<br />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                IMG:  @serviceType.ImageURL<br />
-            </div>
-            <div class="col-md-6">
-                Count:  @serviceType.CountOfServices<br />
-            </div>
-        </div>
-        <hr />
-    </div>
-}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>ImageURL</th>
+            <th>CountOfServices</th>
+            <th>Actions</th>
+        <tr>
+    </thead>
+    @foreach (var serviceType in Model)
+    {
+        <tr>
+            <td>@serviceType.ID</td>
+            <td>@serviceType.Name</td>
+            <td>@serviceType.ImageURL</td>
+            <td>@serviceType.CountOfServices</td>
+            <td>
+            <a href="~/ServiceType/Delete/@serviceType.ID"> Delete </a>
+            </td>
+        </tr>
+    }
+ 
+    </table>
+
 
 <a href="~/ServiceType/Create">Create new Service type</a>

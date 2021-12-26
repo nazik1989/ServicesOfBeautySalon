@@ -17,19 +17,19 @@ namespace ServicesOfBeautySalon.Controllers
             List<ServiceTypeModel> model;
 
             using (var context = new BeautySalonServiceDBConection())
-           
+
             {
                 var serviceTypes = context.ServiceTypes.ToList();
                 model = serviceTypes.Select
                     (st => new ServiceTypeModel
-                    { ID = st.ID,
-                    Name =st.Name,
-                    ImageURL = st.ImageURL,
-                    CountOfServices = (int)st.CountOfServices
+                    {   ID = st.ID,
+                        Name = st.Name,
+                        ImageURL = st.ImageURL,
+                        CountOfServices = (int)st.CountOfServices
                     })
                     .ToList();
             }
-                
+
             return View(model);
         }
 
@@ -41,7 +41,7 @@ namespace ServicesOfBeautySalon.Controllers
 
         [HttpPost]
         public ActionResult Create(ServiceTypeModel model)
-        {   
+        {
             using (var context = new BeautySalonServiceDBConection())
             {
                 string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
@@ -55,9 +55,39 @@ namespace ServicesOfBeautySalon.Controllers
                 });
 
                 context.SaveChanges();
-                
+
             }
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult Delete(long id)
+        {
+            ServiceType serviceType;
+            using (var context = new BeautySalonServiceDBConection())
+            {
+               serviceType = context.ServiceTypes.FirstOrDefault(
+                    st => st.ID == id);
+            }
+                return View(new ServiceTypeModel { ID = serviceType.ID,
+                                                   Name = serviceType.Name,
+                                                   ImageURL = serviceType.ImageURL,
+                                                   CountOfServices = serviceType.CountOfServices
+                });
+        }
+
+
+        [HttpPost]
+        public ActionResult Delete(ServiceTypeModel model)
+        {
+            using (var context = new BeautySalonServiceDBConection())
+            {
+                var serviceType = context.ServiceTypes.FirstOrDefault(st => st.ID == model.ID);
+                context.ServiceTypes.Remove(serviceType);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
     }
 }
