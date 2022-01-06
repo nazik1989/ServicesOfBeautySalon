@@ -45,12 +45,12 @@ namespace ServicesOfBeautySalon.Controllers
             using (var context = new BeautySalonServiceDBConection())
             {
                 string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
-                var countOfServices = context.ServiceTypes.Count();
+                var countOfServices = context.ServiceTypes.Count() + 1;
                 context.ServiceTypes.Add(new ServiceType
                 {
                     ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
                     Name = model.Name,
-                    ImageURL = model.ImageURL,
+                    ImageURL = "./images/" + model.ImageURL,
                     CountOfServices = countOfServices
                 });
 
@@ -60,6 +60,22 @@ namespace ServicesOfBeautySalon.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult OneServiceType(long id)
+        {
+            ServiceType serviceType;
+            using (var context = new BeautySalonServiceDBConection())
+            {
+                serviceType = context.ServiceTypes.FirstOrDefault(
+                    st => st.ID == id);
+            }
+            return View(new ServiceTypeModel {
+                ID = serviceType.ID,
+                Name = serviceType.Name,
+                ImageURL = serviceType.ImageURL,
+                CountOfServices = serviceType.CountOfServices
+            });
+        }
 
         [HttpGet]
         public ActionResult Delete(long id)

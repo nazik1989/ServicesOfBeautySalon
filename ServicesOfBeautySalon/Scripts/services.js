@@ -1,6 +1,9 @@
 
-function servicesInServiceType(id)
-{
+function servicesInServiceType(id) {
+//{
+//    $("button").click(function () {
+
+//    });
     var serviceType = document.getElementById(id).getElementsByTagName('h4')[0].innerText;
     var servicesDiv = document.getElementById("servicesinChoosenServiceType");
 
@@ -8,7 +11,12 @@ function servicesInServiceType(id)
         {
             servicesDiv.removeChild(servicesDiv.firstChild);
         }
-  
+
+$.ajax({
+    url: "~/serviceType/demo_test.txt", success: function (result) {
+        $("#div1").html(result);
+    }
+});
         for (i = 0; i < 10; i++)
         {
             var oneServiceDiv = document.createElement('div');

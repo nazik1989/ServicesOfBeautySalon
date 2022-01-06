@@ -12,7 +12,6 @@
 
 <div class="agileits-about-top">
     <div class="container">
-
         <div class="agileinfo-top-grids" id="servicesinChoosenServiceType">
         </div>
 
@@ -21,7 +20,18 @@
             <p>Choose your  service type and select the best servce for you.</p>
 
         </div>
-        <div class="agileinfo-top-grids">
+
+        @foreach (var serviceType in Model)
+        {
+            <div class="col-sm-4 wthree-top-grid serviceTypeDiv" id="handServiceDiv" onclick="servicesInServiceType(serviceType.ID)">
+                <img class="img-responsive" alt="" src=@serviceType.ImageURL  />
+                <h4 class="serviceTypeName">@serviceType.Name</h4>
+                <p>Servicetype ID: @serviceType.ID</p>
+            </div>
+        }
+
+
+        @*<div class="agileinfo-top-grids">
             <div class="col-sm-4 wthree-top-grid" id="handServiceDiv" onclick="servicesInServiceType(this.id)">
                 <img src="images/handService.jpg" class="img-responsive" alt="" />
                 <h4 class="serviceTypeName">Hand Services</h4>
@@ -59,7 +69,7 @@
             <div class="clearfix">
 
             </div>
-        </div>
+        </div>*@
     </div>
 
 </div>
@@ -87,7 +97,8 @@
             <td>@serviceType.ImageURL</td>
             <td>@serviceType.CountOfServices</td>
             <td>
-            <a href="~/ServiceType/Delete/@serviceType.ID"> Delete </a>
+            <button class="danger"><a href="~/ServiceType/Delete/@serviceType.ID"> Delete </a></button>
+            <button class="danger"><a href="~/ServiceType/OneServiceType/@serviceType.ID"> OneServiceType </a></button>
             </td>
         </tr>
     }

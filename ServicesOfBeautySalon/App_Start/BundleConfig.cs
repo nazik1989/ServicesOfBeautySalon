@@ -30,6 +30,8 @@ namespace ServicesOfBeautySalon
 
             bundles.Add(new ScriptBundle("~/bundles/home").Include(
                 "~/Scripts/home.js"));
+            bundles.Add(new ScriptBundle("~/bundles/services").Include(
+            "~/Scripts/services.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jarallax").Include(
                 "~/Scripts/jarallax.js"));            

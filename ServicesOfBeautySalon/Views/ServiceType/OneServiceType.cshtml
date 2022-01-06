@@ -1,0 +1,17 @@
+﻿@using ServicesOfBeautySalon.Models
+
+@model ServiceTypeModel
+
+@{
+    ViewBag.Title = "OneServiceType";
+}
+
+<h6>OneService</h6>
+
+
+<h3>ID :  @Model.ID </h3>
+<h2>Name: @Model.Name </h2>
+<img  src= @Model.ImageURL class="img-responsive" alt=@Model.ImageURL />
+<p>@Model.ImageURL  .....</p>
+<p>ServiceTypeCount:  @Model.CountOfServices </p>
+

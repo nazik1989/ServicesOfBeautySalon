@@ -24,6 +24,7 @@
     @Scripts.Render("~/bundles/easing")
     @Scripts.Render("~/bundles/home")
     @Scripts.Render("~/bundles/jarallax")
+    @Scripts.Render("~/bundles/services")
     
     @*@Scripts.Render("~/bundles/owlcarousel")*@
 
@@ -177,9 +178,6 @@
 
 
         <footer>
-
-
-
             <!-- footer -->
             <div class="footer">
                 <div class="container">
@@ -230,57 +228,10 @@
             <!-- //footer -->
 
             <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-            <!-- //smooth scrolling -->
-            @*<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>*@
-            <!-- start-smoth-scrolling -->
-            @*<script src="js/home.js"></script>
-        <script src="js/jarallax.js"></script>*@
-
 
             @Scripts.Render("~/bundles/afterJaralax")
 
 
-            @*<script type="text/javascript">
-            /* init Jarallax */
-            $('.jarallax').jarallax({
-                speed: 0.5,
-                imgWidth: 1366,
-                imgHeight: 768
-            })
-        </script>*@
-
-
-            <!--<!-- flexSlider -->-->
-            <!--@*<script defer src="js/jquery.flexslider.js"></script>*@
-            <script type="text/javascript">
-                $(window).load(function () {
-                    $('.flexslider').flexslider({
-                        animation: "slide",
-                        start: function (slider) {
-                            $('body').removeClass('loading');
-                        }
-                    });
-                });
-            </script>-->
-            <!-- //flexSlider -->
-
-
-            <!--<!-- Owl-Carousel-JavaScript -->-->
-            <!--@*<script src="js/owl.carousel.js"></script>*@
-            <script>
-                $(document).ready(function () {
-                    $("#owl-demo").owlCarousel({
-                        items: 2,
-                        lazyLoad: true,
-                        autoPlay: false,
-                        pagination: true,
-                    });
-                });
-            </script>-->
-            <!-- //Owl-Carousel-JavaScript -->
-
-            @*<script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>*@
             <script type="text/javascript">
                 jQuery(document).ready(function ($) {
                     $(".scroll").click(function (event) {
@@ -291,39 +242,6 @@
                     });
                 });
             </script>
-            <!-- start-smoth-scrolling -->
-            <!-- here stars scrolling icon -->
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    /*
-                        var defaults = {
-                        containerID: 'toTop', // fading element id
-                        containerHoverID: 'toTopHover', // fading element hover id
-                        scrollSpeed: 1200,
-                        easingType: 'linear'
-                        };
-                    */
-
-                    $().UItoTop({
-                        easingType: 'easeOutQuart'
-                    });
-
-                });
-            </script>
-            <!--<!-- //here ends scrolling icon -->
-            <!-- stats -->-->
-            <!--@*<script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.countup.js"></script>*@
-            <!--<script>
-                $('.counter').countUp();
-            </script>-->
-            <!-- //stats -->
-            <!--js for bootstrap working-->-->
-            <!--@*<script src="js/bootstrap.js"></script>*@-->
-            <!-- //for bootstrap working -->
-
-
-
         </footer>
     </div>
 </body>
