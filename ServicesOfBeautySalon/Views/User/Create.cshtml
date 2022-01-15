@@ -1,0 +1,211 @@
+﻿@model ServicesOfBeautySalon.Models.UserModel
+
+@{
+    ViewBag.Title = "Create";
+    ViewBag.PageHeaderText = "Registration   User | Master | Admin";
+}
+
+<style>
+    .required {
+        color:red;
+    }
+    input[type='checkbox'] {
+        background: green;
+    }
+
+    input[type=checkbox]:checked:after {
+    }
+
+    #selectedImageDiv {
+        display: none;
+    }
+
+    #output_image {
+        height: 100px;
+    }
+
+    select, input {
+        border: none;
+        border-radius: 20px;
+    }
+
+    #RegisterUserDiv {
+        background-image: url("../images/33.jpg");
+        border-radius: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #RegisterUserFormDiv {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .registerUserFormField {
+        margin: 5px;
+        height: 50px;
+        width: 500px;
+        border-radius: 20px;
+        border: 5px solid darkslategrey;
+        background-color: white;
+    }
+
+    .imputArea {
+        height: 50px;
+        width: 500px;
+        border-radius: 20px
+    }
+
+    label {
+    }
+
+    .registerUserFormButtons {
+        box-shadow: 10px;
+        border-radius: 20px;
+        margin: 5px;
+        height: 50px;
+        width: 200px;
+        background-color: darkslategrey;
+        color: white;
+    }
+
+    .registerUserFormFieldLabel {
+        color: white;
+    }
+
+    .inputFieldDivRegUser {
+    }
+
+    #buttonsDiv {
+        display: inline-block;
+    }
+
+    #ShowPSW {
+        color: white;
+    }
+    .errorDiv {
+        color: red;
+        box-shadow: 10px;
+        text-align:center;
+    }
+</style>
+
+<script>
+
+    function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('output_image');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+        var getImagePath = event.target.files[0].name;
+        console.log("ImagePath", getImagePath);
+        document.getElementById("selectedImageDiv").style.display = "block";
+    }
+
+    function showPSWCheckboxFunction() {
+        var x = document.getElementById("userPassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    function createUser() {
+        alert("Create User")
+    }
+    function Reset() {
+        document.getElementById("selectedImageDiv").style.display = "none";
+    }
+
+</script>
+
+<div class="contact">
+    <div class="container" id="RegisterUserDiv">
+        <div id="RegisterUserFormDiv">
+            <form action="~/User/Create" method="post">
+                <div>
+                    <label class="registerUserFormFieldLabel" for="firstName">First Name*</label><br />
+                    <div class="registerUserFormField">
+                        <input class ="imputArea" type="text" name="FirstName" placeholder="firstname" required="">
+                    </div>
+                    <div class="errorDiv" id="firstNameError">
+                        FirstName isn't correct!
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="lastName">Last Name*</label><br />
+                    <div class="registerUserFormField">
+                        <input class ="imputArea" type="text" name="LastName" placeholder="lastname" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="phone">Mobile Number*</label>
+                    <div class="registerUserFormField">
+                        <input class ="imputArea" type="text" name="Phone" placeholder="+37493740074" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="email">Email*</label>
+                    <div class="registerUserFormField">
+                        <input type="email" class="imputArea email" name="Mail" placeholder="Email" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="image">Upload an image</label>
+                    <div class="registerUserFormField">
+                        <input class ="imputArea" type="file" name="ImageURL" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">
+                        <!--read what is accept="image/*"-->
+                    </div>
+                    <div id="selectedImageDiv">
+                        <img id="output_image" />">
+                    </div>
+
+                    @*<label class="registerUserFormFieldLabel" for="role">Select the role</label>
+                    <div class="registerUserFormField">
+                        <select class="imputArea form-select" aria-label="Default select example" name="role">
+                            <option selected>All roles</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                            <option value="Master">Master</option>
+                        </select>
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="beautySalon">Select the Beauty Salon</label>
+                    <div class="registerUserFormField">
+                        <select class="form-select imputArea" aria-label="Default select example" name="beautySalon">
+                            <option selected>All beauty salons</option>
+                            <option value="Arminka">Arminka</option>
+                            <option value="Aga">Aga</option>
+                            <option value="Image Code">Image Code</option>
+                        </select>
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="service">Select the Service(s)</label>
+                    <div class="registerUserFormField">
+                        <select class="form-select imputArea" aria-label="Default select example" name="service">
+                            <option selected>All services</option>
+                            <option value="Manikyur">Manikyur</option>
+                            <option value="MakeUp">MakeUp</option>
+                            <option value="Hairdressing">Hairdressing</option>
+                        </select>
+                    </div>*@
+
+                    <label class="registerUserFormFieldLabel" for="userName">User Name*</label>
+                    <div class="registerUserFormField">
+                        <input class ="imputArea"type="text" name="UserName" placeholder="UserName123" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="password">Password <span class="required">*</span></label>
+                    <div class="registerUserFormField">
+                        <input class ="imputArea"type="password" name="Password" placeholder="ABSD1234" required="" id="userPassword">
+                    </div>
+                    <div id="ShowPSW"><input type="checkbox" onclick="showPSWCheckboxFunction()">  Show Password</div>
+
+                </div>
+                <div id="buttonsDiv">
+                    <button class="registerUserFormButtons" type="reset" value="Reset" onclick="Reset()">Reset</button>
+                    <button class="registerUserFormButtons" type="submit" value="Register"><a>Register</a></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

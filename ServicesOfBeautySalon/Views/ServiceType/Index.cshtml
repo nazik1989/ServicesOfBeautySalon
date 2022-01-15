@@ -1,16 +1,16 @@
 ﻿@using ServicesOfBeautySalon.Models
-@model IEnumerable<ServiceTypeModel>
+@model IEnumerable<RegistrationModel>
 
 
 @{
-    ViewBag.Title = "ServiceType";
+    ViewBag.Title = "RegistrationIndexPage";
 }
 
 
 
 
-
-<div class="agileits-about-top">
+@*important don't delete*@
+@*<div class="agileits-about-top">
     <div class="container">
         <div class="agileinfo-top-grids" id="servicesinChoosenServiceType">
         </div>
@@ -24,68 +24,28 @@
         @foreach (var serviceType in Model)
         {
             <div class="col-sm-4 wthree-top-grid serviceTypeDiv" id="handServiceDiv" onclick="servicesInServiceType(serviceType.ID)">
-                <img class="img-responsive" alt="" src=@serviceType.ImageURL  />
+                <div id="ServiceTypeImageInIndexDiv">
+                    <img class="img-responsive" alt="" src=~/images/@serviceType.ImageURL  id="ServiceTypeImageInIndex"/>
+                </div>
                 <h4 class="serviceTypeName">@serviceType.Name</h4>
                 <p>Servicetype ID: @serviceType.ID</p>
             </div>
         }
-
-
-        @*<div class="agileinfo-top-grids">
-            <div class="col-sm-4 wthree-top-grid" id="handServiceDiv" onclick="servicesInServiceType(this.id)">
-                <img src="images/handService.jpg" class="img-responsive" alt="" />
-                <h4 class="serviceTypeName">Hand Services</h4>
-                <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-            <div class="col-sm-4 wthree-top-grid" id="footServiceDiv" onclick="servicesInServiceType(this.id)">
-                <img src="images/footService.jpg" class="img-responsive" alt="" />
-                <h4>Foot Services</h4>
-                <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-            <div class="col-sm-4 wthree-top-grid" id="hairServiceDiv" onclick="servicesInServiceType(this.id)">
-                <img src="images/p9.jpg" class="img-responsive" alt="" />
-                <h4>Hair Services</h4>
-                <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-
-        <div class="agileinfo-top-grids">
-            <div class="col-sm-4 wthree-top-grid" id="faceServiceDiv" onclick="servicesInServiceType(this.id)">
-                <img src="images/p11.jpg" class="img-responsive" alt="" />
-                <h4>Fase Services</h4>
-                <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-            <div class="col-sm-4 wthree-top-grid" id="bodyServiceDiv" onclick="servicesInServiceType(this.id)">
-                <img src="images/bodyMassage.jpg" class="img-responsive" alt="" />
-                <h4>Body Services</h4>
-                <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-            <div class="col-sm-4 wthree-top-grid" id="discountedServiceDiv" onclick="servicesInServiceType(this.id)">
-                <img src="images/discountedService.jpg" class="img-responsive" alt="" />
-                <h4>Discounted Services</h4>
-                <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-            <div class="clearfix">
-
-            </div>
-        </div>*@
     </div>
 
-</div>
+</div>*@
 
 
 
-<h2>My all ServiceTypes</h2>
+<h2>All Registrations</h2>
 
 
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>ImageURL</th>
-            <th>CountOfServices</th>
+            <th>Start time</th>
+            <th>End time</th>
             <th>Actions</th>
         <tr>
     </thead>
@@ -93,12 +53,12 @@
     {
         <tr>
             <td>@serviceType.ID</td>
-            <td>@serviceType.Name</td>
-            <td>@serviceType.ImageURL</td>
-            <td>@serviceType.CountOfServices</td>
+            <td>@serviceType.StartTime</td>
+            <td>@serviceType.EndTime</td>
             <td>
-            <button class="danger"><a href="~/ServiceType/Delete/@serviceType.ID"> Delete </a></button>
-            <button class="danger"><a href="~/ServiceType/OneServiceType/@serviceType.ID"> OneServiceType </a></button>
+                <a href="~/ServiceType/Edit/@serviceType.ID"> Edit*** need edit </a>
+                <button class="btn-success"><a href="~/ServiceType/OneServiceType/@serviceType.ID"> OneRegistration*** need edit</a></button>
+                <button class="btn-danger"><a href="~/ServiceType/Delete/@serviceType.ID"> Delete*** need edit</a></button>
             </td>
         </tr>
     }

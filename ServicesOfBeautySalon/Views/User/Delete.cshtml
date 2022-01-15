@@ -1,0 +1,17 @@
+﻿@using ServicesOfBeautySalon.Models
+
+@model UserModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete User</h2>
+
+@using (Html.BeginForm("Delete", "User", FormMethod.Post))
+    { 
+    @Html.HiddenFor(m => m.ID)
+        <p>Are you sure you want to delete the @Model.FirstName user ? </p>
+        <input type="submit" value="Delete"/>
+        @Html.ActionLink("Cancel", "Index", "User")
+    }

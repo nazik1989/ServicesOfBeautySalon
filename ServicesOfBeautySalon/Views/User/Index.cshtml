@@ -1,0 +1,95 @@
+﻿@using ServicesOfBeautySalon.Models
+@model IEnumerable<UserModel>
+
+
+@{
+    ViewBag.Title = "UserIndexPage";
+    ViewBag.PageHeaderText = "All Users";
+}
+
+<style>
+    #userImageInTD {
+        height:100px;
+    }
+</style>
+
+
+@*important don't delete*@
+@*<div class="agileits-about-top">
+        <div class="container">
+            <div class="agileinfo-top-grids" id="servicesinChoosenServiceType">
+            </div>
+
+            <div class="wthree_head_section">
+                <h3 class="w3l_header">Service <span>types </span></h3>
+                <p>Choose your  service type and select the best servce for you.</p>
+
+            </div>
+
+            @foreach (var serviceType in Model)
+            {
+                <div class="col-sm-4 wthree-top-grid serviceTypeDiv" id="handServiceDiv" onclick="servicesInServiceType(serviceType.ID)">
+                    <div id="ServiceTypeImageInIndexDiv">
+                        <img class="img-responsive" alt="" src=~/images/@serviceType.ImageURL  id="ServiceTypeImageInIndex"/>
+                    </div>
+                    <h4 class="serviceTypeName">@serviceType.Name</h4>
+                    <p>Servicetype ID: @serviceType.ID</p>
+                </div>
+            }
+        </div>
+
+    </div>*@
+
+
+
+
+ Mail { get; set; }
+        public string ImageURL { get; set; }
+        public long RoleID { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+
+
+
+
+<h2>All Users</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Mail</th>
+            <th>Phone</th>
+            <th>ImageURL</th>
+            <th>RoleID</th>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>Actions</th>
+        <tr>
+    </thead>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.ID</td>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Phone</td>
+            <td><img id="userImageInTD" src="~/images/@user.ImageURL" /></td>
+            <td>@user.RoleID</td>
+            <td>@user.UserName</td>
+            <td>@user.Password</td>
+            <td>
+                <a href="~/ServiceType/Edit/@user.ID"> EditUser*** need edit </a>
+                <button class="btn-success"><a href="~/User/OneUser/@user.ID"> OneUser*** need edit</a></button>
+                <button class="btn-danger"><a href="~/User/Delete/@user.ID"> DeleteUser*** need edit</a></button>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<a href="~/User/Create">Create new User</a>

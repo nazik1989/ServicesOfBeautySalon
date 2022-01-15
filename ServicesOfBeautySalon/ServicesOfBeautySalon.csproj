@@ -133,7 +133,9 @@
     <Compile Include="Controllers\BeautySalonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ServiceTypeController.cs" />
     <Compile Include="DAL\Advertisement.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -180,11 +182,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BeautySalon.cs" />
-    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\AdvertisementModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\BeautySalonServiceModel.cs" />
+    <Compile Include="Models\BeautySalonModel.cs" />
+    <Compile Include="Models\RoleModel.cs" />
     <Compile Include="Models\ServiceModel.cs" />
     <Compile Include="Models\ServiceTypeModel.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +213,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\266857421_441566947478780_3920450949852290598_n.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\bootstrap-theme.css.map" />
@@ -351,6 +358,14 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\ServiceType\Delete.cshtml" />
     <Content Include="Views\ServiceType\OneServiceType.cshtml" />
+    <Content Include="Views\Registration\Create.cshtml" />
+    <Content Include="Views\Registration\Index.cshtml" />
+    <Content Include="Views\ServiceType\Edit.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\OneUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

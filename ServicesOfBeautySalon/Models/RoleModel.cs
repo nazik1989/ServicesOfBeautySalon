@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ServicesOfBeautySalon.Models
 {
-    public class Role
+    public class RoleModel
     {
         public long ID { get; set; }
         public string Name { get; set; }

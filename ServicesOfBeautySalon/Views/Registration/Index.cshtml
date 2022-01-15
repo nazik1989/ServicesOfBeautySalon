@@ -1,0 +1,31 @@
+﻿@using ServicesOfBeautySalon.Models
+@model  IEnumerable<RegistrationModel>
+
+@{
+    ViewBag.Title = "IndexForRegistration";
+}
+
+<h2>Registration</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>StartTime</th>
+            <th>EndTime</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    @foreach (var service in Model)
+    {
+    <tr>
+        <td>@service.ID</td>
+        <td>@service.StartTime</td>
+        <td>@service.EndTime</td>
+        <td>OneRegistration</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    }
+
+
+</table>

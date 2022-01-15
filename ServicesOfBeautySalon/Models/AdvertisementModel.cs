@@ -5,13 +5,14 @@ using System.Web;
 
 namespace ServicesOfBeautySalon.Models
 {
-    public class ServiceTypeModel
+    public class AdvertisementModel
     {
         public long ID { get; set; }
         public string Name { get; set; }
-        public string ImageURL { get; set; }
-        public int? CountOfServices { get; set; }
+        public string Description { get; set; }
         public long BeautySalonID { get; set; }
-        public virtual ICollection<BeautySalonModel> BeautySalons { get; set; }
+
+        public virtual BeautySalonModel BeautySalon { get; set; }
+
     }
 }

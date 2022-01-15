@@ -1,0 +1,19 @@
+﻿@using ServicesOfBeautySalon.Models
+
+@model ServiceTypeModel
+
+@{
+    ViewBag.Title = "EditServiceType";
+}
+
+<h2>Edit serviceType</h2>
+
+<form action="~/ServiceType/Edit" method="post">
+    @Html.HiddenFor(st => st.ID)
+    @Html.TextBoxFor(st => st.Name)
+    @Html.TextBoxFor(st => st.ImageURL)
+    <br/>
+    <br/>
+    <input type="submit" value="Save"/>
+    @Html.ActionLink("Cancel", "Index", "ServiceType")
+</form>

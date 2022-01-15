@@ -50,7 +50,7 @@ namespace ServicesOfBeautySalon.Controllers
                 {
                     ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
                     Name = model.Name,
-                    ImageURL = "./images/" + model.ImageURL,
+                    ImageURL = model.ImageURL,
                     CountOfServices = countOfServices
                 });
 
@@ -104,6 +104,41 @@ namespace ServicesOfBeautySalon.Controllers
                 context.SaveChanges();
             }
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            ServiceTypeModel model;
+            using (var context = new BeautySalonServiceDBConection())
+            {
+                var serviceType = context.ServiceTypes.FirstOrDefault(s => s.ID == id);
+                model = new ServiceTypeModel
+                {
+                    ID = serviceType.ID,
+                    Name = serviceType.Name,
+                    ImageURL = serviceType.ImageURL,
+                    CountOfServices = serviceType.CountOfServices
+
+                };
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ServiceType model)
+        {
+            using (var context = new BeautySalonServiceDBConection())
+            {
+                var serviceType = context.ServiceTypes.FirstOrDefault(st => st.ID == model.ID);
+                serviceType.Name = model.Name;
+                serviceType.ImageURL = model.ImageURL;
+                serviceType.CountOfServices = context.Services.Where(s => s.ServiceType.Name.ToString() == model.Name).Count();
+                context.Entry(serviceType).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+            }
+
+                return RedirectToAction("Index");
         }
     }
 }

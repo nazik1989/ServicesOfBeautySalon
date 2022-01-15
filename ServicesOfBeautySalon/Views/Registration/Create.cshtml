@@ -1,0 +1,173 @@
+﻿@model ServicesOfBeautySalon.Models.RegistrationModel
+
+@{
+    ViewBag.Title = "RegistrationView";
+    ViewBag.PageHeaderText = "Registration";
+}
+<style>
+    #selectedImageDiv {
+        display: none;
+    }
+
+    #output_image {
+        height: 100px;
+    }
+
+    select, input {
+        border: none;
+        border-radius: 20px;
+    }
+
+    #RegisterUserDiv {
+        background-image: url("../images/33.jpg");
+        border-radius: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #RegisterUserFormDiv {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .registerUserFormField {
+        margin: 5px;
+        height: 50px;
+        width: 500px;
+        border-radius: 20px;
+        border: 5px solid darkslategrey;
+        background-color: white;
+    }
+
+    label {
+    }
+
+    .registerUserFormButtons {
+        box-shadow: 10px;
+        border-radius: 20px;
+        margin: 5px;
+        height: 50px;
+        width: 200px;
+        background-color: darkslategrey;
+        color: white;
+    }
+
+    .registerUserFormFieldLabel {
+        color: white;
+    }
+
+    .inputFieldDivRegUser {
+    }
+</style>
+<script>
+    function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('output_image');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+        document.getElementById("selectedImageDiv").style.display = "block";
+    }
+
+    function showPSWCheckboxFunction() {
+        var x = document.getElementById("userPassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    function createUser() {
+        alert("Create User")
+    }
+    function Reset() {
+        document.getElementById("selectedImageDiv").style.display = "none";
+    }
+</script>
+
+<div class="contact">
+    <div class="container" id="RegisterUserDiv">
+        <div id="RegisterUserFormDiv">
+            <form action="#" method="post">
+                <div>
+                    <label class="registerUserFormFieldLabel" for="firstName">First Name*</label><br />
+                    <div class="registerUserFormField">
+                        <input type="text" name="firstName" placeholder="firstname" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="lastName">Last Name*</label><br />
+                    <div class="registerUserFormField">
+                        <input type="text" name="lastName" placeholder="lastname" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="phone">Mobile Number*</label>
+                    <div class="registerUserFormField">
+                        <input type="text" name="phone" placeholder="+37493740074" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="email">Email*</label>
+                    <div class="registerUserFormField">
+                        <input type="email" class="email" name="Email" placeholder="Email" required="">
+                    </div>
+
+                    <label class="registerUserFormFieldLabel" for="image">Upload an image</label>
+                    <div class="registerUserFormField">
+                        <input type="file" name="image" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">
+                        <!--read what is accept="image/*"-->
+                    </div>
+                    <div id="selectedImageDiv">
+                        <img id="output_image" />">
+                    </div>
+
+                    <div class="registerUserFormField">
+                        <label class="registerUserFormFieldLabel" for="role">Select the role <span>:</span></label>
+                        <select class="form-select" aria-label="Default select example" name="role">
+                            <option selected>All roles</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                            <option value="Master">Master</option>
+                        </select>
+                    </div>
+
+                    <div class="registerUserFormField">
+                        <label class="registerUserFormFieldLabel" for="beautySalon">Select the Beauty Salon <span>:</span></label>
+                        <select class="form-select" aria-label="Default select example" name="beautySalon">
+                            <option selected>All beauty salons</option>
+                            <option value="Arminka">Arminka</option>
+                            <option value="Aga">Aga</option>
+                            <option value="Image Code">Image Code</option>
+                        </select>
+                    </div>
+
+                    <div class="registerUserFormField">
+                        <label class="registerUserFormFieldLabel" for="service">Select the Service(s) <span>:</span></label>
+                        <select class="form-select" aria-label="Default select example" name="service">
+                            <option selected>All services</option>
+                            <option value="Manikyur">Manikyur</option>
+                            <option value="MakeUp">MakeUp</option>
+                            <option value="Hairdressing">Hairdressing</option>
+                        </select>
+                    </div>
+
+                    <div class="registerUserFormField">
+                        <label class="registerUserFormFieldLabel" for="userName">User Name <span>:</span></label>
+                        <input type="text" name="userName" placeholder="UserName123" required="">
+                    </div>
+
+                    <div class="registerUserFormField">
+                        <label class="registerUserFormFieldLabel" for="password">Password <span>:</span></label>
+                        <input type="password" name="password" placeholder="ABSD1234" required="" id="userPassword">
+                        <input type="checkbox" onclick="showPSWCheckboxFunction()"> Show Password
+                    </div>
+
+                </div>
+
+                <button class="registerUserFormButtons" type="reset" value="Reset" onclick="Reset()">Reset</button>
+                <button class="registerUserFormButtons" type="submit" value="Register" onclick="createUser()">Register</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,25 @@
+﻿@using ServicesOfBeautySalon.Models
+
+@model UserModel
+
+@{
+    ViewBag.Title = "Edit User";
+    ViewBag.PageHeaderText = "Edit User";
+}
+
+<h2>Edit User</h2>
+
+<form action="~/User/Edit" method="post">
+    @Html.HiddenFor(u => u.ID)
+    @Html.TextBoxFor(u => u.FirstName)
+    @Html.TextBoxFor(u => u.LastName)
+    @Html.TextBoxFor(u => u.Phone)
+    @Html.TextBoxFor(u => u.Mail)
+    @Html.TextBoxFor(u => u.ImageURL)
+    @Html.TextBoxFor(u => u.UserName)
+    @Html.TextBoxFor(u => u.Password)
+    <br/>
+    <br/>
+    <input type="submit" value="Save"/>
+    @Html.ActionLink("Cancel", "Index", "User")
+</form>
