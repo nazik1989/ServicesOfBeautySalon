@@ -14,7 +14,7 @@ namespace ServicesOfBeautySalon.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<ServiceTypeModel> model;
+            List<ServiceTypeModel> model = new List<ServiceTypeModel>();
 
             using (var context = new BeautySalonServiceDBConection())
 
@@ -22,7 +22,8 @@ namespace ServicesOfBeautySalon.Controllers
                 var serviceTypes = context.ServiceTypes.ToList();
                 model = serviceTypes.Select
                     (st => new ServiceTypeModel
-                    {   ID = st.ID,
+                    {
+                        ID = st.ID,
                         Name = st.Name,
                         ImageURL = st.ImageURL,
                         CountOfServices = (int)st.CountOfServices
@@ -42,22 +43,26 @@ namespace ServicesOfBeautySalon.Controllers
         [HttpPost]
         public ActionResult Create(ServiceTypeModel model)
         {
-            using (var context = new BeautySalonServiceDBConection())
+            if (ModelState.IsValid)
             {
-                string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
-                var countOfServices = context.ServiceTypes.Count() + 1;
-                context.ServiceTypes.Add(new ServiceType
+                using (var context = new BeautySalonServiceDBConection())
                 {
-                    ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
-                    Name = model.Name,
-                    ImageURL = model.ImageURL,
-                    CountOfServices = countOfServices
-                });
+                    string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
+                    var countOfServices = context.ServiceTypes.Count() + 1;
+                    context.ServiceTypes.Add(new ServiceType
+                    {
+                        ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
+                        Name = model.Name,
+                        ImageURL = model.ImageURL,
+                        CountOfServices = countOfServices
+                    });
 
-                context.SaveChanges();
-
+                    context.SaveChanges();   
+                }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            
+            return  View(model);
         }
 
         [HttpGet]
@@ -109,7 +114,7 @@ namespace ServicesOfBeautySalon.Controllers
         [HttpGet]
         public ActionResult Edit(long id)
         {
-            ServiceTypeModel model;
+            ServiceTypeModel model = new ServiceTypeModel() { ID=1, ImageURL = "jhgvhvku", Name="Name1"}; ;
             using (var context = new BeautySalonServiceDBConection())
             {
                 var serviceType = context.ServiceTypes.FirstOrDefault(s => s.ID == id);
@@ -126,7 +131,7 @@ namespace ServicesOfBeautySalon.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(ServiceType model)
+        public ActionResult Edit(ServiceTypeModel model)
         {
             using (var context = new BeautySalonServiceDBConection())
             {
@@ -138,7 +143,7 @@ namespace ServicesOfBeautySalon.Controllers
                 context.SaveChanges();
             }
 
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
     }
 }

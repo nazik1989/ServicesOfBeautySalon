@@ -8,6 +8,7 @@ namespace ServicesOfBeautySalon.Models
 {
     public class HomeModel
     {
-        public List<AdvertisementModel> Advertisements{ get; set; }
-        public List<ServiceTypeModel> ServiceTypes{ get; set; }
+        public List<AdvertisementModel> Advertisements { get; set; }
+        public List<ServiceTypeModel> ServiceTypes { get; set; }
+    }
 }

@@ -1,9 +1,9 @@
 ﻿@using ServicesOfBeautySalon.Models
-@model IEnumerable<RegistrationModel>
+@model IEnumerable<ServiceTypeModel>
 
 
 @{
-    ViewBag.Title = "RegistrationIndexPage";
+    ViewBag.Title = "ServiceTypeIndexPage";
 }
 
 
@@ -37,15 +37,15 @@
 
 
 
-<h2>All Registrations</h2>
+<h2>All ServiceTypes</h2>
 
 
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Start time</th>
-            <th>End time</th>
+            <th>Name</th>
+            <th>CountOfServices</th>
             <th>Actions</th>
         <tr>
     </thead>
@@ -53,8 +53,8 @@
     {
         <tr>
             <td>@serviceType.ID</td>
-            <td>@serviceType.StartTime</td>
-            <td>@serviceType.EndTime</td>
+            <td>@serviceType.Name</td>
+            <td>@serviceType.CountOfServices</td>
             <td>
                 <a href="~/ServiceType/Edit/@serviceType.ID"> Edit*** need edit </a>
                 <button class="btn-success"><a href="~/ServiceType/OneServiceType/@serviceType.ID"> OneRegistration*** need edit</a></button>

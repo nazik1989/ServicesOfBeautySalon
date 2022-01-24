@@ -46,27 +46,33 @@ namespace ServicesOfBeautySalon.Controllers
         [HttpPost]
         public ActionResult Create(UserModel model)
         {
-            using (var context = new BeautySalonServiceDBConection())
+            if (ModelState.IsValid)
             {
-                string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
-                context.Users.Add(new User
+                using (var context = new BeautySalonServiceDBConection())
                 {
-                    ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
-                    Phone = model.Phone,
-                    Mail = model.Mail,
-                    ImageURL = model.ImageURL,
+                    string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
+                    context.Users.Add(new User
+                    {
+                        ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Phone = model.Phone,
+                        Mail = model.Mail,
+                        ImageURL = model.ImageURL,
 
-                    RoleID = 4,
-                    UserName = model.UserName,
-                    Password = model.Password
-                })  ;
+                        RoleID = 4,
+                        UserName = model.UserName,
+                        Password = model.Password
+                    });
 
-                context.SaveChanges();
+                    context.SaveChanges();
 
+                }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            
+            return View(model);
+            
         }
 
         [HttpGet]

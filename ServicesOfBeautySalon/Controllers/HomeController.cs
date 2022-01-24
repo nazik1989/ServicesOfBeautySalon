@@ -70,5 +70,12 @@ namespace ServicesOfBeautySalon.Controllers
             }
                 return Json(counts, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public ActionResult GetRootPath()
+        {
+            string rootPath = Server.MapPath("~");
+            return Json(rootPath, JsonRequestBehavior.AllowGet);
+        }
     }
 }

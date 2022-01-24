@@ -128,25 +128,34 @@
                 <div>
                     <label class="registerUserFormFieldLabel" for="firstName">First Name*</label><br />
                     <div class="registerUserFormField">
-                        <input class ="imputArea" type="text" name="FirstName" placeholder="firstname" required="">
+                        <input class ="imputArea" type="text" name="FirstName" placeholder="firstname">
                     </div>
-                    <div class="errorDiv" id="firstNameError">
-                        FirstName isn't correct!
+                    <div class="text-danger">
+                        @Html.ValidationMessageFor(u => u.FirstName)
                     </div>
 
                     <label class="registerUserFormFieldLabel" for="lastName">Last Name*</label><br />
                     <div class="registerUserFormField">
                         <input class ="imputArea" type="text" name="LastName" placeholder="lastname" required="">
                     </div>
+                    <div class="text-danger">
+                        @Html.ValidationMessageFor(u => u.LastName)
+                    </div>
 
                     <label class="registerUserFormFieldLabel" for="phone">Mobile Number*</label>
                     <div class="registerUserFormField">
                         <input class ="imputArea" type="text" name="Phone" placeholder="+37493740074" required="">
                     </div>
+                    <div class="text-danger">
+                            @Html.ValidationMessageFor(u => u.Phone)
+                    </div>
 
                     <label class="registerUserFormFieldLabel" for="email">Email*</label>
                     <div class="registerUserFormField">
-                        <input type="email" class="imputArea email" name="Mail" placeholder="Email" required="">
+                        <input type="text" class="imputArea email" name="Mail" placeholder="Email" required="">
+                    </div>
+                    <div class="text-danger">
+                        @Html.ValidationMessageFor(u => u.Mail)
                     </div>
 
                     <label class="registerUserFormFieldLabel" for="image">Upload an image</label>
@@ -202,7 +211,7 @@
                 </div>
                 <div id="buttonsDiv">
                     <button class="registerUserFormButtons" type="reset" value="Reset" onclick="Reset()">Reset</button>
-                    <button class="registerUserFormButtons" type="submit" value="Register"><a>Register</a></button>
+                    <button class="registerUserFormButtons" type="submit" value="Register">Register</button>
                 </div>
 
             </form>

@@ -109,12 +109,12 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a class="active" href="index.html">@Html.ActionLink("Home", "Index", "Home")</a></li>
-                            <li><a href="beautySalons.html">@Html.ActionLink("Salons", "Index", "BeautySalon")</a></li>
-                            <li><a href="masters.html">@Html.ActionLink("Masters", "Index", "Master")</a></li>
-                            <li><a>@Html.ActionLink("Service Types", "Index", "ServiceType")</a></li>
-                            <li><a href="discountedServices.html">@Html.ActionLink("Services", "Index","Service")</a></li>
-                            <li><a href="about.html">@Html.ActionLink("About", "Index", "About")</a></li>
+                            <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class="active" })</li>
+                            <li>@Html.ActionLink("Salons", "Index", "BeautySalon")</li>
+                            <li>@Html.ActionLink("Masters", "Index", "Master")</li>
+                            <li>@Html.ActionLink("Service Types", "Index", "ServiceType")</li>
+                            <li>@Html.ActionLink("Services", "Index","Service")</li>
+                            <li>@Html.ActionLink("About", "Index", "About")</li>
                         </ul>
 
                     </div>
