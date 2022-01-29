@@ -14,8 +14,8 @@
 </style>
 
 
-@*important don't delete*@
-@*<div class="agileits-about-top">
+important don't delete
+<div class="agileits-about-top">
         <div class="container">
             <div class="agileinfo-top-grids" id="servicesinChoosenServiceType">
             </div>
@@ -26,30 +26,21 @@
 
             </div>
 
-            @foreach (var serviceType in Model)
+            @foreach (var user in Model)
             {
                 <div class="col-sm-4 wthree-top-grid serviceTypeDiv" id="handServiceDiv" onclick="servicesInServiceType(serviceType.ID)">
                     <div id="ServiceTypeImageInIndexDiv">
-                        <img class="img-responsive" alt="" src=~/images/@serviceType.ImageURL  id="ServiceTypeImageInIndex"/>
+                        <img class="img-responsive" alt="" src=~/images/@user.ImageURL  id="ServiceTypeImageInIndex"/>
                     </div>
-                    <h4 class="serviceTypeName">@serviceType.Name</h4>
-                    <p>Servicetype ID: @serviceType.ID</p>
+                    <h4 class="serviceTypeName">@user.FirstName</h4>
+                    <p>User ID: @user.ID</p>
+                    <p>User LastName: @user.LastName</p>
+                    <p>User Email: @user.Mail</p>
                 </div>
             }
         </div>
 
-    </div>*@
-
-
-
-
- Mail { get; set; }
-        public string ImageURL { get; set; }
-        public long RoleID { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-
-
+    </div>
 
 
 <h2>All Users</h2>

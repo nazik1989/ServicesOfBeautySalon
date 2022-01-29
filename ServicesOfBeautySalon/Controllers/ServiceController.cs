@@ -1,4 +1,4 @@
-﻿using ServicesOfBeautySalon.DAL;
+﻿
 using ServicesOfBeautySalon.Models;
 using System;
 using System.Collections.Generic;
@@ -14,33 +14,30 @@ namespace ServicesOfBeautySalon.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<ServiceModel> model;
+            //List<ServiceModel> model;
 
-            using (var context = new BeautySalonServiceDBConection())
-            {
-                var services = context.Services.ToList();
-                model = services.Select(s => new ServiceModel
-                {
-                    ID = s.ID,
-                    Name = s.Name,
-                    ServiceTypeID = s.ServiceTypeID,
-                    Price = s.Price
-                }).ToList();
-            }
+            //using (var context = new BeautySalonServiceDBConection())
+            //{
+            //    var services = context.Services.ToList();
+            //    model = services.Select(s => new ServiceModel
+            //    {
+            //        ID = s.ID,
+            //        Name = s.Name,
+            //        ServiceTypeID = s.ServiceTypeID,
+            //        Price = s.Price
+            //    }).ToList();
+            //}
 
-            return View(model);
+            //return View(model);
+            return View();
         }
 
         [HttpGet]
         public ActionResult CountOfSevicesActionResult()
         {
             int count;
-            using (var context = new BeautySalonServiceDBConection())
-            {
-                var services = context.Services.ToList();
-                count = services.Count();
-               
-            }
+
+            count = 1000;
             return Json(count, JsonRequestBehavior.AllowGet);
         }
     }

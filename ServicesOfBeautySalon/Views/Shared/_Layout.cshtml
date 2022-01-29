@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Services of the Beauty Salon | Created by Walnut</title>
 
-    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-
-    <link href="~/Content/font-awesome.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Content/font-awesome.css">
     <link rel="stylesheet" href="~/Content/owl.carousel.css" type="text/css" media="all" />
     <link rel="stylesheet" href="~/Content/flexslider.css" type="text/css" media="screen" property="" />
+    <link rel="stylesheet" href="~/Content/style.css" type="text/css" media="all" />
 
-    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
     <style>
         .img-oneService {
             height: 500px;
-            width:500px;
+            width: 500px;
             border: 2px solid orange;
         }
+
         #ServiceTypeImageInIndexDiv {
             height: 500px;
-            width:400px;
+            width: 400px;
         }
+
         #ServiceTypeImageInIndex {
             width: 300px;
         }
+
         #tdServiceTypeImage {
-            height:200px;
-            width:200px;
+            height: 200px;
+            width: 200px;
         }
+
         #registrationButtonLink {
             color: white;
         }
     </style>
+
 
     @*it doesn't work correctly*@
     @*@Styles.Render("~/Content/css")*@
@@ -43,10 +46,9 @@
 
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/easing")
-    @Scripts.Render("~/bundles/home")
     @Scripts.Render("~/bundles/jarallax")
     @Scripts.Render("~/bundles/services")
-    
+
     @*@Scripts.Render("~/bundles/owlcarousel")*@
 
     @*@Scripts.Render("~/bundles/movetop")*@
@@ -58,6 +60,7 @@
     @*@Scripts.Render("~/bundles/lightbox")*@
     @*@Scripts.Render("~/bundles/lightboxmap")*@
 
+    <script src="~/Scripts/common.js"></script>
     @RenderSection("scripts", required: false)
 </head>
 <body>
@@ -81,11 +84,11 @@
                             <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
                         </div>
                         <div id="loginRegistrBTN">
-                            <button type="submit" class="btn btn-default btn-primary"><a href="~/User/Create" id="registrationButtonLink">Registration</a></button>
+                            <button type="submit" class="btn btn-default btn-primary"><a  href="~/User/Create" id="registrationButtonLink">Registration</a></button>
                             <button type="submit" class="btn btn-default btn-warning">Login</button>
                         </div>
                     </div>
-
+                   
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -106,7 +109,6 @@
 
                     </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class="active" })</li>
@@ -118,7 +120,6 @@
                         </ul>
 
                     </div>
-                    <!-- /.navbar-collapse -->
 
                 </nav>
             </div>

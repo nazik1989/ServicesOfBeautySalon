@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServicesOfBeautySalon.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,11 @@ namespace ServicesOfBeautySalon.Controllers
 {
     public class MasterController : Controller
     {
-        // GET: Service
+        // GET: Master
         public ActionResult Index()
         {
-            return View();
+            var masters = MasterService.getMasters();
+            return View(masters);
         }
     }
 }

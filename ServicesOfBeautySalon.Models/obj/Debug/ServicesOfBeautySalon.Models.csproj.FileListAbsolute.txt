@@ -1,0 +1,6 @@
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.Models\bin\Debug\ServicesOfBeautySalon.Models.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.Models\bin\Debug\ServicesOfBeautySalon.Models.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.Models\obj\Debug\ServicesOfBeautySalon.Models.csprojAssemblyReference.cache
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.Models\obj\Debug\ServicesOfBeautySalon.Models.csproj.CoreCompileInputs.cache
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.Models\obj\Debug\ServicesOfBeautySalon.Models.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.Models\obj\Debug\ServicesOfBeautySalon.Models.pdb

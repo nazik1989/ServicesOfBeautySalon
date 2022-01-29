@@ -1,0 +1,16 @@
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.BLL.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.BLL.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.Common.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.DAL.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.Common.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.DAL.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\obj\Debug\ServicesOfBeautySalon.BLL.csprojAssemblyReference.cache
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\obj\Debug\ServicesOfBeautySalon.BLL.csproj.CoreCompileInputs.cache
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\obj\Debug\ServicesOfBeautySalon.BLL.csproj.CopyComplete
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\obj\Debug\ServicesOfBeautySalon.BLL.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\obj\Debug\ServicesOfBeautySalon.BLL.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.Models.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\EntityFramework.dll
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.DAL.dll.config
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\ServicesOfBeautySalon.Models.pdb
+C:\Users\NEK\Desktop\ServicesOfBeautySalon\ServicesOfBeautySalon.BLL\bin\Debug\EntityFramework.xml

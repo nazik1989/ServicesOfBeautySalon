@@ -1,9 +1,10 @@
-﻿@model ServicesOfBeautySalon.Models.RegistrationModel
+﻿@*@model ServicesOfBeautySalon.Models.RegistrationModel*@
 
 @{
     ViewBag.Title = "RegistrationView";
     ViewBag.PageHeaderText = "Registration";
 }
+<!--
 <style>
     #selectedImageDiv {
         display: none;
@@ -59,6 +60,7 @@
     .inputFieldDivRegUser {
     }
 </style>
+
 <script>
     function preview_image(event) {
         var reader = new FileReader();
@@ -113,9 +115,9 @@
 
                     <label class="registerUserFormFieldLabel" for="image">Upload an image</label>
                     <div class="registerUserFormField">
-                        <input type="file" name="image" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">
-                        <!--read what is accept="image/*"-->
-                    </div>
+                        <input type="file" name="image" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">-->
+<!--read what is accept="image/*"-->
+<!--</div>
                     <div id="selectedImageDiv">
                         <img id="output_image" />">
                     </div>
@@ -169,5 +171,4 @@
             </form>
         </div>
     </div>
-</div>
-
+</div>-->
