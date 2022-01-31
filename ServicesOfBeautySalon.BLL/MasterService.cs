@@ -15,11 +15,19 @@ namespace ServicesOfBeautySalon.BLL
 
             var masters = MasterRepository.getMasters();
 
+        //public long RoleID { get; set; }
+
             return masters.Select(u => new UserModel {
                 ID = u.ID,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
-                Email = u.Mail
+                Phone = u.Phone,
+                Mail = u.Mail,
+                ImageURL = u.ImageURL,
+                RoleID = u.RoleID,
+                UserName = u.UserName,
+                Password = u.Password
+
             }).ToList();
         }
     }

@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvertisementModel.cs" />
+    <Compile Include="BeautySalonModel.cs" />
+    <Compile Include="BeautySalonServiceModel.cs" />
+    <Compile Include="RegistrationModel.cs" />
+    <Compile Include="RoleModel.cs" />
+    <Compile Include="ServiceModel.cs" />
+    <Compile Include="ServiceTypeModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

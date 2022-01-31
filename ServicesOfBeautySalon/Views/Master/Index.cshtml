@@ -5,12 +5,40 @@
     ViewBag.Title = "MasterIndex";
 }
 
-<h2>Master's Index</h2>
-@foreach (var master in Model)
-{
-    <h1>ID:  @master.ID</h1>
-    <p>FirstName:  @master.FirstName</p>
-    <p>LastName:  @master.LastName</p>
-    <p>Email:  @master.Email</p>
-}
+<style>
+    #indexMasterImage {
+        height: 300px;
+    }
+</style>
 
+<div class="container">
+    <h2>Master's Index</h2>
+    @foreach (var master in Model)
+    {
+    <div class="row">
+        <div class="col-md-3">
+            <img  src="~/images/aga.jpg" id="indexMasterImage" />
+        
+        </div>
+        <div class="col-md-5">
+            <p><b>ID:</b>  @master.ID</p>
+            <p><b>FirstName:</b>  @master.FirstName</p>
+            <p><b>LastName:</b>  @master.LastName</p>
+            <p><b>Mail:</b>  @master.Mail</p>
+            <p><b>Phone:</b>  @master.Phone</p>
+            <p><b>RoleID:</b>  @master.LastName</p>
+            <p><b>UserName:</b>  @master.Mail</p>
+        </div>
+    </div>
+    <hr/>
+    }
+
+</div>                @*ID = u.ID,
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                Phone = u.Phone,
+                Mail = u.Mail,
+                ImageURL = u.ImageURL,
+                RoleID = u.RoleID,
+                UserName = u.UserName,
+                Password = u.Password*@

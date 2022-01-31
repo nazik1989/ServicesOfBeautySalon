@@ -13,7 +13,7 @@ namespace ServicesOfBeautySalon.DAL
             var masters = new List<User>();
             using (var context = new BeautySalonServiceDBEntities())
             {
-                masters = context.Users.AsNoTracking().Select(u => u).Where(u => u.RoleID == 3 & u.FirstName == "AgaMaster").ToList();
+                masters = context.Users.AsNoTracking().Select(u => u).Where(u => u.RoleID == 3).ToList();
             }
             return masters;
         } 
