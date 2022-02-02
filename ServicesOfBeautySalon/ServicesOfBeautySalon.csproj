@@ -305,7 +305,7 @@
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\User\OneUser.cshtml" />
+    <Content Include="Views\User\UserAccount.cshtml" />
     <Content Include="Views\Master\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

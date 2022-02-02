@@ -128,7 +128,7 @@
         <div id="RegisterUserFormDiv">
             <form action="~/User/Create" method="post">
                 <div>
-                    <label class="registerUserFormFieldLabel" for="firstName">First Name*</label><br />
+                    <label class="registerUserFormFieldLabel" for="FirstName">First Name*</label><br />
                     <div class="registerUserFormField">
                         <input class ="imputArea" type="text" name="FirstName" placeholder="firstname">
                     </div>
@@ -136,7 +136,7 @@
                         @Html.ValidationMessageFor(u => u.FirstName)
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="lastName">Last Name*</label><br />
+                    <label class="registerUserFormFieldLabel" for="LastName">Last Name*</label><br />
                     <div class="registerUserFormField">
                         <input class ="imputArea" type="text" name="LastName" placeholder="lastname" required="">
                     </div>
@@ -144,7 +144,7 @@
                         @Html.ValidationMessageFor(u => u.LastName)
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="phone">Mobile Number*</label>
+                    <label class="registerUserFormFieldLabel" for="Phone">Mobile Number*</label>
                     <div class="registerUserFormField">
                         <input class ="imputArea" type="text" name="Phone" placeholder="+37493740074" required="">
                     </div>
@@ -152,7 +152,7 @@
                             @Html.ValidationMessageFor(u => u.Phone)
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="email">Email*</label>
+                    <label class="registerUserFormFieldLabel" for="Mail">Email*</label>
                     <div class="registerUserFormField">
                         <input type="text" class="imputArea email" name="Mail" placeholder="Email" required="">
                     </div>
@@ -160,7 +160,7 @@
                         @Html.ValidationMessageFor(u => u.Mail)
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="image">Upload an image</label>
+                    <label class="registerUserFormFieldLabel" for="ImageURL">Upload an image</label>
                     <div class="registerUserFormField">
                         <input class ="imputArea" type="file" name="ImageURL" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">
                         @*read what is accept="image/*"*@
@@ -169,7 +169,7 @@
                         <img id="output_image" />">
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="role">Select the role</label>
+                    @*<label class="registerUserFormFieldLabel" for="role">Select the role</label>
                     <div class="registerUserFormField">
                         <select class="imputArea form-select" aria-label="Default select example" name="role">
                             <option selected>All roles</option>
@@ -197,16 +197,16 @@
                             <option value="MakeUp">MakeUp</option>
                             <option value="Hairdressing">Hairdressing</option>
                         </select>
-                    </div>
+                    </div>*@
 
-                    <label class="registerUserFormFieldLabel" for="userName">User Name*</label>
+                    <label class="registerUserFormFieldLabel" for="UserName">User Name*</label>
                     <div class="registerUserFormField">
                         <input class ="imputArea"type="text" name="UserName" placeholder="UserName123" required="">
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="password">Password <span class="required">*</span></label>
+                    <label class="registerUserFormFieldLabel" for="Password">Password <span class="required">*</span></label>
                     <div class="registerUserFormField">
-                        <input class ="imputArea"type="password" name="Password" placeholder="ABSD1234" required="" id="userPassword">
+                        <input class ="imputArea"type="password" name="Password"  required="" id="userPassword">
                     </div>
                     <div id="ShowPSW"><input type="checkbox" onclick="showPSWCheckboxFunction()">  Show Password</div>
 

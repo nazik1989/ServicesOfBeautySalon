@@ -91,6 +91,7 @@
     <Compile Include="User.cs">
       <DependentUpon>ServicesOfBeautySalonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServicesOfBeautySalon.Common\ServicesOfBeautySalon.Common.csproj">

@@ -1,4 +1,5 @@
 ﻿
+using ServicesOfBeautySalon.BLL;
 using ServicesOfBeautySalon.Models;
 using System;
 using System.Collections.Generic;
@@ -10,30 +11,14 @@ namespace ServicesOfBeautySalon.Controllers
 {
     public class UserController : Controller
     {
+
+        UserService userService = new UserService();
         // GET: ServiceType
         [HttpGet]
         public ActionResult Index()
         {
             List<UserModel> model = new List<UserModel>();
-
-            //using (var context = new BeautySalonServiceDBConection())
-
-            //{
-            //    var users = context.Users.ToList();
-            //    model = users.Select
-            //        (u => new UserModel
-            //        {
-            //            ID = u.ID,
-            //            FirstName = u.FirstName,
-            //            LastName = u.LastName,
-            //            ImageURL = u.ImageURL,
-            //            Phone = u.Phone,
-            //            Mail = u.Mail,
-            //            UserName = u.UserName,
-            //            Password = u.Password
-            //        })
-            //        .ToList();
-            //}
+            model = userService.getUsers();
 
             return View(model);
         }
@@ -47,75 +32,50 @@ namespace ServicesOfBeautySalon.Controllers
         [HttpPost]
         public ActionResult Create(UserModel model)
         {
-            //if (ModelState.IsValid)
-            //{
-                //using (var context = new BeautySalonServiceDBConection())
-                //{
-                //    string getId = DateTime.Now.ToString().Replace(".", "").Replace(":", "").Replace(" ", "");
-                //    context.Users.Add(new User
-                //    {
-                //        ID = Convert.ToInt64(getId), //Convert.ToInt32(DateTime.Now.ToString().Replace(".", "")),
-                //        FirstName = model.FirstName,
-                //        LastName = model.LastName,
-                //        Phone = model.Phone,
-                //        Mail = model.Mail,
-                //        ImageURL = model.ImageURL,
-                //        RoleID = 4,
-                //        UserName = model.UserName,
-                //        Password = model.Password
-                //    });
-
-                //    context.SaveChanges();
-
-                //}
-            //    return RedirectToAction("Index");
-            //}
+            if (ModelState.IsValid)
+            {
+                userService.createUser(model);
+                return RedirectToAction("Index");
+            }
 
             return View(model);
 
         }
 
-        //[HttpGet]
-        //public ActionResult OneUser(long id)
-        //{
-        //    User user;
-        //    using (var context = new BeautySalonServiceDBConection())
-        //    {
-        //        user = context.Users.FirstOrDefault(
-        //            st => st.ID == id);
-        //    }
-        //    return View(new UserModel {
-        //        ID = user.ID,
-        //        FirstName = user.FirstName,
-        //        LastName = user.LastName,
-        //        ImageURL = user.ImageURL,
-        //        Phone = user.Phone,
-        //        Mail = user.Mail,
-        //        UserName = user.UserName,
-        //        Password = user.Password
-        //    });
-        //}
+        [HttpGet]
+        public ActionResult UserAccount(long id)
+        {
+            UserModel user;
+            //using (var context = new BeautySalonServiceDBConection())
+            //{
+            //    user = context.Users.FirstOrDefault(
+            //        st => st.ID == id);
+            //}
+            return View(new UserModel
+            {
+                ID = id,
+                RoleID = 3,
+                FirstName = "Hard coded firstName for Account",
+                LastName = "Hard coded lastName for Account"
 
-        //[HttpGet]
-        //public ActionResult Delete(long id)
-        //{
-        //    User user;
-        //    using (var context = new BeautySalonServiceDBConection())
-        //    {
-        //       user = context.Users.FirstOrDefault(
-        //            st => st.ID == id);
-        //    }
-        //        return View(new UserModel { 
-        //            ID = user.ID,
-        //            FirstName = user.FirstName,
-        //            LastName = user.LastName,
-        //            ImageURL = user.ImageURL,
-        //            Phone = user.Phone,
-        //            Mail = user.Mail,
-        //            UserName = user.UserName,
-        //            Password = user.Password
-        //        });
-        //}
+            }); ;
+        }
+
+        [HttpGet]
+        public ActionResult Delete(long id)
+        {
+            //using (var context = new BeautySalonServiceDBConection())
+            //{
+            //    user = context.Users.FirstOrDefault(
+            //         st => st.ID == id);
+            //}
+            return View(new UserModel
+            {
+                ID = id,
+                FirstName = "Hard coded firstName",
+                LastName = "Hard coded lastName"
+            });
+        }
 
 
         //[HttpPost]
@@ -130,28 +90,28 @@ namespace ServicesOfBeautySalon.Controllers
         //    return RedirectToAction("Index");
         //}
 
-        //[HttpGet]
-        //public ActionResult Edit(long id)
-        //{
-        //    UserModel model;
-        //    using (var context = new BeautySalonServiceDBConection())
-        //    {
-        //        var user = context.Users.FirstOrDefault(s => s.ID == id);
-        //        model = new UserModel
-        //        {
-        //            ID = user.ID,
-        //            FirstName = user.FirstName,
-        //            LastName = user.LastName,
-        //            ImageURL = user.ImageURL,
-        //            Phone = user.Phone,
-        //            Mail = user.Mail,
-        //            UserName = user.UserName,
-        //            Password = user.Password
+        [HttpGet]
+        public ActionResult Edit(long id)
+        {
+            UserModel model = new UserModel();
+            //using (var context = new BeautySalonServiceDBConection())
+            //{
+            //    var user = context.Users.FirstOrDefault(s => s.ID == id);
+            //    model = new UserModel
+            //    {
+            //        ID = user.ID,
+            //        FirstName = user.FirstName,
+            //        LastName = user.LastName,
+            //        ImageURL = user.ImageURL,
+            //        Phone = user.Phone,
+            //        Mail = user.Mail,
+            //        UserName = user.UserName,
+            //        Password = user.Password
 
-        //        };
-        //    }
-        //    return View(model);
-        //}
+            //    };
+            //}
+            return View(model);
+        }
 
         //[HttpPost]
         //public ActionResult Edit(User model)

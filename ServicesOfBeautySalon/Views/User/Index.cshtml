@@ -1,5 +1,5 @@
 ﻿@using ServicesOfBeautySalon.Models
-@model IEnumerable<UserModel>
+@model List<UserModel>
 
 
 @{
@@ -8,14 +8,25 @@
 }
 
 <style>
-    #userImageInTD {
-        height:100px;
+
+    /* visited link */
+    .bs-action-buttons:visited {
+        color: yellow;
+    }
+    /* mouse over link */
+    .bs-action-buttons:hover {
+        color: yellow;
+    }
+    /* selected link */
+    .bs-action-buttons:active {
+        color: purple;
     }
 </style>
 
 
-important don't delete
-<div class="agileits-about-top">
+@*important don't delete*@
+
+@*<div class="agileits-about-top">
         <div class="container">
             <div class="agileinfo-top-grids" id="servicesinChoosenServiceType">
             </div>
@@ -40,13 +51,14 @@ important don't delete
             }
         </div>
 
-    </div>
+    </div>*@
 
 
 <h2>All Users</h2>
+<button class="btn-success bs-action-buttons">@Html.ActionLink("Create New User", "Create", "User",null,new { @class = "bs-action-button-links" })</button>
+<hr/>
 
-
-<table class="table">
+<table class="table-bordered">
     <thead>
         <tr>
             <th>ID</th>
@@ -67,20 +79,23 @@ important don't delete
             <td>@user.ID</td>
             <td>@user.FirstName</td>
             <td>@user.LastName</td>
+            <td>@user.Mail</td>
             <td>@user.Phone</td>
             <td><img id="userImageInTD" src="~/images/@user.ImageURL" /></td>
             <td>@user.RoleID</td>
             <td>@user.UserName</td>
             <td>@user.Password</td>
             <td>
-                <a href="~/ServiceType/Edit/@user.ID"> EditUser*** need edit </a>
-                <button class="btn-success"><a href="~/User/OneUser/@user.ID"> OneUser*** need edit</a></button>
-                <button class="btn-danger"><a href="~/User/Delete/@user.ID"> DeleteUser*** need edit</a></button>
+
+                <button class="btn-danger bs-action-buttons">@Html.ActionLink("Delete", "Delete", "User", new { ID = @user.ID }, new { @class = "bs-action-button-links " })</button>
+                <button class="btn-info bs-action-buttons">@Html.ActionLink("Edit", "Edit", new { ID = @user.ID }, new { @class = "bs-action-button-links " })</button>
+                <button class="btn-warning bs-action-buttons">@Html.ActionLink("Account", "UserAccount", new { ID = @user.ID }, new { @class = "bs-action-button-links " })</button>
             </td>
         </tr>
+
     }
 
 </table>
 
 
-<a href="~/User/Create">Create new User</a>
+
