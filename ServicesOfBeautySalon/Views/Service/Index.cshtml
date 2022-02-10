@@ -1,38 +1,51 @@
-﻿<h2>Service Index </h2>
-@*@using ServicesOfBeautySalon.Models
-@model IEnumerable<ServiceModel>
+﻿
+@using ServicesOfBeautySalon.Models
+@model List<ServiceModel>
 
 @{
     ViewBag.Title = "IndexForServices";
 }
+<div class="container">
+    <form method="post" action="~/Service/SearchServicesByName">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Service name" name="Name">
+            </div>
+            <div class="col">
+                <button class="btn-success">Search service</button>
+            </div>
+        </div>
 
-<h2>Services in </h2>
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>SeviceType</th>
-            <th>Price</th>
-            <th>BeautySalon</th>
-            <th>Master</th>
-            <th>Discount</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    @foreach (var service in Model)
-    {
-    <tr>
-        <td>@service.ID</td>
-        <td>@service.Name</td>
-        <td>@service.ServiceTypeID</td>
-        <td>@service.Price</td>
-        <td>@service.Price</td>
-        <td>@service.Price</td>
-        <td>@service.Price</td>
-        <td>@service.Price</td>
-    </tr>
-    }
+    </form><br />
+    <h2>All Services</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>SeviceType</th>
+                <th>Price</th>
+                <th>BeautySalon</th>
+                <th>Master</th>
+                <th>Discount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.ID</td>
+                <td>@service.Name</td>
+                <td>@service.ServiceTypeID</td>
+                <td>@service.Price</td>
+                <td>HardcodedBeautySlaon</td>
+                <td>Hardcoded Discount</td>
+                <td>Delete</td>
+                <td>Update</td>
+            </tr>
+        }
 
 
-</table>*@
+    </table>
+</div>

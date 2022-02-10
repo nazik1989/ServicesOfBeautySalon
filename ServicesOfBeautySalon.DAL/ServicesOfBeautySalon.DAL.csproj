@@ -70,6 +70,7 @@
     <Compile Include="Service.cs">
       <DependentUpon>ServicesOfBeautySalonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServiceRepository.cs" />
     <Compile Include="ServicesOfBeautySalonModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

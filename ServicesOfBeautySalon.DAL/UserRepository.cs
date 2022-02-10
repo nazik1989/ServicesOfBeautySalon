@@ -11,7 +11,9 @@ namespace ServicesOfBeautySalon.DAL
         public List<User> users { get; set; }
         public User user { get; set; }
 
-        public List<User> getUsers()
+        //public GetUser(long id)
+        //{ }
+        public List<User> GetUsers()
         {
             using (var context = new BeautySalonServiceDBEntities()) 
             {
@@ -19,7 +21,7 @@ namespace ServicesOfBeautySalon.DAL
             }
             return users;
         }
-        public User createUser(User model) {
+        public User CreateUser(User model) {
             User user;
             using (var context = new BeautySalonServiceDBEntities())
             {

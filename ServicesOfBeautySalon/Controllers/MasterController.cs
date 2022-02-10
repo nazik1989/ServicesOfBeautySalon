@@ -12,8 +12,15 @@ namespace ServicesOfBeautySalon.Controllers
         // GET: Master
         public ActionResult Index()
         {
-            var masters = MasterService.getMasters();
+            var masters = MasterService.GetMasters();
             return View(masters);
         }
+
+        public ActionResult GetSpecialMaster(long id)
+        {
+            var master = MasterService.GetSpecialMaster(id);
+            return View("GetSpecialMaster", master);
+        }
     }
+
 }

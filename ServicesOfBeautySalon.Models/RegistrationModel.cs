@@ -15,7 +15,7 @@ namespace ServicesOfBeautySalon.Models
         public System.TimeSpan StartTime { get; set; }
         public System.TimeSpan EndTime { get; set; }
 
-        //public virtual BeautySalonServiceModel BeautySalonService { get; set; }
-        //public virtual UserModel User { get; set; }
+        public virtual BeautySalonServiceModel BeautySalonService { get; set; }
+        public virtual UserModel User { get; set; }
     }
 }

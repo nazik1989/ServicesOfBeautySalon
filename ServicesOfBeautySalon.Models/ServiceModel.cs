@@ -10,7 +10,7 @@ namespace ServicesOfBeautySalon.Models
     {
         public ServiceModel()
         {
-            //this.BeautySalonServices = new List<BeautySalonServiceModel>();
+            this.BeautySalonServices = new List<BeautySalonServiceModel>();
         }
 
         public long ID { get; set; }
@@ -19,7 +19,7 @@ namespace ServicesOfBeautySalon.Models
         public Nullable<int> Price { get; set; }
 
         
-        //public virtual ICollection<BeautySalonServiceModel> BeautySalonServices { get; set; }
-        //public virtual ServiceTypeModel ServiceType { get; set; }
+        public virtual List<BeautySalonServiceModel> BeautySalonServices { get; set; }
+        public virtual ServiceTypeModel ServiceType { get; set; }
     }
 }

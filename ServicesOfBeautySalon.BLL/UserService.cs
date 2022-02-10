@@ -13,9 +13,9 @@ namespace ServicesOfBeautySalon.BLL
         public List<UserModel> users { get; set; }
 
         UserRepository userRepository = new UserRepository();
-        public List<UserModel> getUsers() 
+        public List<UserModel> GetUsers() 
         {
-            users = userRepository.getUsers().Select(u => new UserModel
+            users = userRepository.GetUsers().Select(u => new UserModel
             {
                 ID = u.ID,
                 FirstName = u.FirstName,
@@ -32,10 +32,10 @@ namespace ServicesOfBeautySalon.BLL
             return users;
         }
 
-        public UserModel createUser(UserModel model)
+        public UserModel CreateUser(UserModel model)
         { 
             
-            userRepository.createUser(new User
+            userRepository.CreateUser(new User
             {
                 ID = model.ID,
                 FirstName = model.FirstName,

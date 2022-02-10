@@ -13,6 +13,6 @@ namespace ServicesOfBeautySalon.Models
         public string Description { get; set; }
         public long BeautySalonID { get; set; }
 
-        //public virtual BeautySalonModel BeautySalon { get; set; }
+        public virtual BeautySalonModel BeautySalon { get; set; }
     }
 }

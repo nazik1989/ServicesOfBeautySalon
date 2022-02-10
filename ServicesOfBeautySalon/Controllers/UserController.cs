@@ -13,13 +13,12 @@ namespace ServicesOfBeautySalon.Controllers
     {
 
         UserService userService = new UserService();
-        // GET: ServiceType
+        
         [HttpGet]
         public ActionResult Index()
         {
             List<UserModel> model = new List<UserModel>();
-            model = userService.getUsers();
-
+            model = userService.GetUsers();
             return View(model);
         }
 
@@ -34,7 +33,7 @@ namespace ServicesOfBeautySalon.Controllers
         {
             if (ModelState.IsValid)
             {
-                userService.createUser(model);
+                userService.CreateUser(model);
                 return RedirectToAction("Index");
             }
 

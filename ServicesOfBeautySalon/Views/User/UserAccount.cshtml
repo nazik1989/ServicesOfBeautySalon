@@ -63,7 +63,7 @@
                 <div class="row">
                     @if (true)//there must be some logic
                     {
-                        <button class="btn-warning bs-action-buttons">@Html.ActionLink("Show Masters Services", "Index", "Master", null, new { @class = "bs-action-button-links" })</button>
+                        <button class="btn-warning bs-action-buttons">@Html.ActionLink("Show Masters Services", "IndexForSpecificMaster", "Service", new { ID = @Model.ID}, new { @class = "bs-action-button-links" })</button>
                     }
                 </div>
             </div>

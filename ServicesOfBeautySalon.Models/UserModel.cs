@@ -10,9 +10,9 @@ namespace ServicesOfBeautySalon.Models
     {
         public UserModel()
         {
-            //this.BeautySalons = new List<BeautySalonModel>();
-            //this.BeautySalonServices = new List<BeautySalonServiceModel>();
-            //this.Registrations = new List<RegistrationModel>();
+            this.BeautySalons = new List<BeautySalonModel>();
+            this.BeautySalonServices = new List<BeautySalonServiceModel>();
+            this.Registrations = new List<RegistrationModel>();
         }
 
         public long ID { get; set; }
@@ -27,11 +27,11 @@ namespace ServicesOfBeautySalon.Models
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        
-        //public virtual ICollection<BeautySalonModel> BeautySalons { get; set; }
-        //public virtual ICollection<BeautySalonServiceModel> BeautySalonServices { get; set; }
-        //public virtual ICollection<RegistrationModel> Registrations { get; set; }
-        //public virtual RoleModel Role { get; set; }
+
+        public virtual List<BeautySalonModel> BeautySalons { get; set; }
+        public virtual List<BeautySalonServiceModel> BeautySalonServices { get; set; }
+        public virtual List<RegistrationModel> Registrations { get; set; }
+        public virtual RoleModel Role { get; set; }
 
 
     }

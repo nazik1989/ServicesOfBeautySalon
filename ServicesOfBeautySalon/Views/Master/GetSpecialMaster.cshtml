@@ -1,0 +1,83 @@
+﻿@using ServicesOfBeautySalon.Models
+
+@model UserModel
+
+@{
+    ViewBag.Title = "Master Account";
+    ViewBag.PageHeaderText = "Master Page";
+}
+<style>
+    #bs-account-action-buttons-div {
+        width: auto;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px black;
+        margin: 5px;
+    }
+    .bs-action-buttons {
+        width: 180px;
+        height: 50px;
+        margin:5px;
+    }
+
+    #bs-user-account-information-div {
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px black;
+        width: auto;
+    }
+    #bs-user-account-image {
+        width: 400px;
+        border-radius: 10px;
+        border-color: black;
+        border-collapse: separate;
+        box-shadow: 10px 10px 10px black;
+    }
+</style>
+<div class="container">
+
+    @if (!(@Model is null))
+    {
+        <div class="row">
+            <hr />
+            <div class="col-md-6">
+                <img id="bs-user-account-image" src="~/images/master.png">
+            </div>
+            <div class="col-md-4">
+                <div class="container" id="bs-user-account-information-div">
+                    <p><b>ID:</b>  @Model.ID </p>
+                    <p><b>FirstName:</b> @Model.FirstName </p>
+                    <p><b>LastName:</b> @Model.LastName </p>
+                    <p><b>Mail:</b> @Model.Mail</p>
+                    <p><b>Phone:</b>  @Model.Phone</p>
+                    <p><b>UserName:</b>  @Model.UserName</p>
+                    <p><b>Password:</b>  @Model.Password</p>
+                </div>
+                <div class="container" id="bs-account-action-buttons-div">
+
+                    <div class="row">
+                        <button class="btn-danger bs-action-buttons">@Html.ActionLink("Update Account", "Edit", "User", new { ID = @Model.ID }, new { @class = "bs-action-button-links" })</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn-info bs-action-buttons">@Html.ActionLink("Delete Account", "Delete", "User", new { ID = @Model.ID }, new { @class = "bs-action-button-links" })</button>
+                    </div>
+                    <div class="row">
+                        @if (true)
+                        {
+                            <button class="btn-warning bs-action-buttons">@Html.ActionLink("Show Masters Services", "IndexForSpecificMaster", "Service", new { ID = @Model.ID }, new { @class = "bs-action-button-links" })</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+    <div class="row">
+        <p>There is not Master with this ID.</p>
+    </div>
+    }
+
+</div>
+
+
+
+

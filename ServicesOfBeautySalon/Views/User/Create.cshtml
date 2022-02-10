@@ -130,7 +130,7 @@
                 <div>
                     <label class="registerUserFormFieldLabel" for="FirstName">First Name*</label><br />
                     <div class="registerUserFormField">
-                        <input class ="imputArea" type="text" name="FirstName" placeholder="firstname">
+                        <input class="imputArea" type="text" name="FirstName" placeholder="firstname">
                     </div>
                     <div class="text-danger">
                         @Html.ValidationMessageFor(u => u.FirstName)
@@ -138,7 +138,7 @@
 
                     <label class="registerUserFormFieldLabel" for="LastName">Last Name*</label><br />
                     <div class="registerUserFormField">
-                        <input class ="imputArea" type="text" name="LastName" placeholder="lastname" required="">
+                        <input class="imputArea" type="text" name="LastName" placeholder="lastname" required="">
                     </div>
                     <div class="text-danger">
                         @Html.ValidationMessageFor(u => u.LastName)
@@ -146,10 +146,10 @@
 
                     <label class="registerUserFormFieldLabel" for="Phone">Mobile Number*</label>
                     <div class="registerUserFormField">
-                        <input class ="imputArea" type="text" name="Phone" placeholder="+37493740074" required="">
+                        <input class="imputArea" type="text" name="Phone" placeholder="+37493740074" required="">
                     </div>
                     <div class="text-danger">
-                            @Html.ValidationMessageFor(u => u.Phone)
+                        @Html.ValidationMessageFor(u => u.Phone)
                     </div>
 
                     <label class="registerUserFormFieldLabel" for="Mail">Email*</label>
@@ -162,51 +162,52 @@
 
                     <label class="registerUserFormFieldLabel" for="ImageURL">Upload an image</label>
                     <div class="registerUserFormField">
-                        <input class ="imputArea" type="file" name="ImageURL" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">
+                        <input class="imputArea" type="file" name="ImageURL" placeholder="image" required="" accept="image/*" onchange="preview_image(event)">
                         @*read what is accept="image/*"*@
                     </div>
                     <div id="selectedImageDiv">
                         <img id="output_image" />">
                     </div>
 
-                    @*<label class="registerUserFormFieldLabel" for="role">Select the role</label>
+                    <label class="registerUserFormFieldLabel" for="role">Select the role</label>
                     <div class="registerUserFormField">
                         <select class="imputArea form-select" aria-label="Default select example" name="role">
                             <option selected>All roles</option>
-                            <option value="Admin">Admin</option>
-                            <option value="User">User</option>
-                            <option value="Master">Master</option>
+                            <option value=1>SuperAdmin</option>
+                            <option value=2>SalonAdmin</option>
+                            <option value=3>MasterUser</option>
+                            <option value=4>RegisteredUser</option>
                         </select>
                     </div>
 
-                    <label class="registerUserFormFieldLabel" for="beautySalon">Select the Beauty Salon</label>
-                    <div class="registerUserFormField">
-                        <select class="form-select imputArea" aria-label="Default select example" name="beautySalon">
-                            <option selected>All beauty salons</option>
-                            <option value="Arminka">Arminka</option>
-                            <option value="Aga">Aga</option>
-                            <option value="Image Code">Image Code</option>
-                        </select>
-                    </div>
+                    @*<label class="registerUserFormFieldLabel" for="beautySalon">Select the Beauty Salon</label>
+        <div class="registerUserFormField">
+            <select class="form-select imputArea" aria-label="Default select example" name="beautySalon">
+                <option selected>All beauty salons</option>
+                <option value="Arminka">Arminka</option>
+                <option value="Aga">Aga</option>
+                <option value="Image Code">Image Code</option>
+            </select>
+        </div>
 
-                    <label class="registerUserFormFieldLabel" for="service">Select the Service(s)</label>
-                    <div class="registerUserFormField">
-                        <select class="form-select imputArea" aria-label="Default select example" name="service">
-                            <option selected>All services</option>
-                            <option value="Manikyur">Manikyur</option>
-                            <option value="MakeUp">MakeUp</option>
-                            <option value="Hairdressing">Hairdressing</option>
-                        </select>
-                    </div>*@
+        <label class="registerUserFormFieldLabel" for="service">Select the Service(s)</label>
+        <div class="registerUserFormField">
+            <select class="form-select imputArea" aria-label="Default select example" name="service">
+                <option selected>All services</option>
+                <option value="Manikyur">Manikyur</option>
+                <option value="MakeUp">MakeUp</option>
+                <option value="Hairdressing">Hairdressing</option>
+            </select>
+        </div>*@
 
                     <label class="registerUserFormFieldLabel" for="UserName">User Name*</label>
                     <div class="registerUserFormField">
-                        <input class ="imputArea"type="text" name="UserName" placeholder="UserName123" required="">
+                        <input class="imputArea" type="text" name="UserName" placeholder="UserName123" required="">
                     </div>
 
                     <label class="registerUserFormFieldLabel" for="Password">Password <span class="required">*</span></label>
                     <div class="registerUserFormField">
-                        <input class ="imputArea"type="password" name="Password"  required="" id="userPassword">
+                        <input class="imputArea" type="password" name="Password" required="" id="userPassword">
                     </div>
                     <div id="ShowPSW"><input type="checkbox" onclick="showPSWCheckboxFunction()">  Show Password</div>
 

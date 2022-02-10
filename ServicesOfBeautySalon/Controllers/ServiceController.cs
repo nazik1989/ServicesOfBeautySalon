@@ -1,4 +1,5 @@
 ﻿
+using ServicesOfBeautySalon.BLL;
 using ServicesOfBeautySalon.Models;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,35 @@ namespace ServicesOfBeautySalon.Controllers
 {
     public class ServiceController : Controller
     {
-        // GET: Service
+        ServiceService serviceService = new ServiceService();
+        public List<ServiceModel> services { get; set; }
+
+       
         [HttpGet]
         public ActionResult Index()
         {
-            //List<ServiceModel> model;
+            services = serviceService.GetServices();
+
+            return View(services);
+        }
+
+        [HttpPost]
+        public ActionResult SearchServicesByName(SearchModel model)
+        {
+           var searchedServices = serviceService.SearchServicesByName(model.Name);
+           return View("Index", searchedServices);
+        }
+
+        [HttpGet]
+        public ActionResult IndexForSpecificMaster(long id)
+        {
+            List<ServiceModel> model = new List<ServiceModel>() {
+                new ServiceModel
+                { ID = id,
+                Name = "Hardcoded special Master service",
+                ServiceTypeID = 1234,
+                Price = 5000 }
+            };
 
             //using (var context = new BeautySalonServiceDBConection())
             //{
@@ -28,8 +53,8 @@ namespace ServicesOfBeautySalon.Controllers
             //    }).ToList();
             //}
 
-            //return View(model);
-            return View();
+           return View("Index", model);
+        
         }
 
         [HttpGet]

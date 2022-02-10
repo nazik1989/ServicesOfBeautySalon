@@ -10,7 +10,7 @@ namespace ServicesOfBeautySalon.Models
     {
         public ServiceTypeModel()
         {
-            //this.Services = new List<ServiceModel>();
+            this.Services = new List<ServiceModel>();
         }
 
         public long ID { get; set; }
@@ -18,7 +18,7 @@ namespace ServicesOfBeautySalon.Models
         public string ImageURL { get; set; }
         public Nullable<int> CountOfServices { get; set; }
 
-      
-        //public virtual ICollection<ServiceModel> Services { get; set; }
+
+        public virtual List<ServiceModel> Services { get; set; }
     }
 }

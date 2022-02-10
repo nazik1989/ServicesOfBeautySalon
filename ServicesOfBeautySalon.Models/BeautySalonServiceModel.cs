@@ -10,7 +10,7 @@ namespace ServicesOfBeautySalon.Models
     {
         public BeautySalonServiceModel()
         {
-            //this.Registrations = new List<RegistrationModel>();
+            this.Registrations = new List<RegistrationModel>();
         }
 
         public long ID { get; set; }
@@ -19,9 +19,9 @@ namespace ServicesOfBeautySalon.Models
         public long MasterUserID { get; set; }
         public Nullable<int> Discount { get; set; }
 
-        //public virtual BeautySalonModel BeautySalon { get; set; }
-        //public virtual ServiceModel Service { get; set; }
-        //public virtual UserModel User { get; set; }
-        //public virtual ICollection<RegistrationModel> Registrations { get; set; }
+        public virtual BeautySalonModel BeautySalon { get; set; }
+        public virtual ServiceModel Service { get; set; }
+        public virtual UserModel User { get; set; }
+        public virtual List<RegistrationModel> Registrations { get; set; }
     }
 }

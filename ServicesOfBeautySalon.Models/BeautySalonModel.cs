@@ -10,8 +10,8 @@ namespace ServicesOfBeautySalon.Models
     {
         public BeautySalonModel()
         {
-            //this.Advertisements = new List<AdvertisementModel>();
-            //this.BeautySalonServices = new List<BeautySalonServiceModel>();
+            this.Advertisements = new List<AdvertisementModel>();
+            this.BeautySalonServices = new List<BeautySalonServiceModel>();
         }
 
         public long ID { get; set; }
@@ -26,8 +26,8 @@ namespace ServicesOfBeautySalon.Models
         public Nullable<int> CountOfMasters { get; set; }
         public long AdminUserID { get; set; }
 
-        //public virtual ICollection<AdvertisementModel> Advertisements { get; set; }
-        //public virtual UserModel User { get; set; }
-        //public virtual ICollection<BeautySalonServiceModel> BeautySalonServices { get; set; }
+        public virtual List<AdvertisementModel> Advertisements { get; set; }
+        public virtual UserModel User { get; set; }
+        public virtual List<BeautySalonServiceModel> BeautySalonServices { get; set; }
     }
 }
